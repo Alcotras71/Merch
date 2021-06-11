@@ -1,0 +1,87 @@
+.solution {
+  &__container {
+    padding-top: 200px;
+  }
+
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 145px;
+  }
+
+  &__hexagon {
+    margin-right: 30px;
+  }
+
+  &__title {
+  }
+
+  &__inner {
+    display: flex;
+    width: 1250px;
+    margin: 0 auto;
+    padding: 0 100px;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__text-inner {
+    margin-bottom: 45px;
+  }
+
+  &__subtitle {
+    padding-bottom: 55px;
+  }
+
+  &__text {
+    margin-bottom: 15px;
+  }
+
+  &__item-wrapper {
+    margin-bottom: 25px;
+
+    .just-do__item {
+      max-width: none;
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    img {
+      position: absolute;
+      top: 5%;
+      right: -15%;
+    }
+  }
+
+  &__square {
+    width: 435px;
+    height: 390px;
+  }
+
+  &__arrow-left,
+  &__arrow-right {
+    position: absolute;
+    background-image: url("./assets/images/hexagon/hexagon_arrow_right.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 55px;
+    height: 60px;
+    transition: all 0.5s ease;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:hover {
+      background-image: url("./assets/images/hexagon/hexagon_arrow_right_light.png");
+    }
+  }
+
+  &__arrow-left {
+    left: 0;
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  &__arrow-right {
+    right: 0;
+  }
+}

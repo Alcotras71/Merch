@@ -1,0 +1,178 @@
+body {
+  font-family: "Muller";
+  font-size: 18px;
+  line-height: 18px;
+  color: $semi-black;
+  overflow-x: hidden;
+}
+
+a {
+  color: $black;
+}
+
+.invisible-title {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.container {
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.wrapper-grey {
+  background: $grey;
+}
+
+.ultrabold {
+  font-family: "RFDewiExtended";
+  font-weight: 800;
+}
+
+.blue {
+  color: $blue;
+}
+
+.black {
+  color: $black;
+}
+
+.text {
+  &--small {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  &--medium {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &--big {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+  &--medium {
+    font-weight: 500;
+  }
+  &--normal {
+    font-weight: 400;
+  }
+}
+
+.title {
+  &--small {
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  &--medium {
+    font-size: 78px;
+    line-height: 100%;
+  }
+
+  &--big {
+    font-size: 120px;
+    line-height: 144px;
+  }
+}
+
+.subtitle {
+  font-size: 72px;
+  line-height: 86px;
+}
+
+.hexagon-wrapper {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
+.bg {
+  &--semi-blue {
+    background-color: $semi-blue;
+  }
+  &--blue {
+    background-color: $blue;
+  }
+  &--black {
+    background-color: $black;
+  }
+}
+
+.hexagon {
+  height: 100%;
+  width: calc(100% * 0.57735);
+  display: inline-block;
+  border-radius: 5px;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: calc((100% / 2) - ((100% * 0.57735) / 2));
+    background-color: inherit;
+    height: inherit;
+    width: inherit;
+    content: "";
+    transform: rotateZ(60deg);
+    border-radius: 5px;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: calc((100% / 2) - ((100% * 0.57735) / 2));
+    background-color: inherit;
+    height: inherit;
+    width: inherit;
+    content: "";
+    transform: rotateZ(-60deg);
+    border-radius: 5px;
+  }
+
+  &--small {
+    width: 20px;
+    height: 20px;
+    .hexagon,
+    .hexagon:after,
+    .hexagon:before {
+      border-radius: 2px;
+    }
+  }
+  &--medium {
+    width: 100px;
+    height: 100px;
+  }
+  &--big {
+    width: 200px;
+    height: 200px;
+  }
+
+  &--arrow {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+.blue {
+  color: $blue;
+}
+.semi-blue {
+  color: $semi-blue;
+}
+.black {
+  color: $black;
+}
+.semi-black {
+  color: $semi-black;
+}

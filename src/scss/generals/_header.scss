@@ -1,0 +1,31 @@
+.header {
+  position: relative;
+  z-index: 2;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    align-items: center;
+    margin-bottom: 120px;
+  }
+
+  &__menu {
+    display: flex;
+  }
+
+  &__socials {
+    display: flex;
+  }
+}
+
+.menu {
+  &__item {
+    margin-left: 70px;
+  }
+}
+.socials {
+  &__item {
+    margin-left: 35px;
+  }
+}
