@@ -1,5 +1,4 @@
 .just-do {
-
   &__title {
     max-width: 1050px;
     margin-bottom: 20px;
@@ -17,7 +16,7 @@
     max-width: 450px;
   }
 
-  &__hexagon{
+  &__hexagon {
     margin-right: 15px;
   }
 
@@ -29,6 +28,10 @@
   &__image {
     position: absolute;
     top: -5%;
-    right: -2%;
+    right: -3%;
+
+    img {
+      width: 62vw;
+    }
   }
 }

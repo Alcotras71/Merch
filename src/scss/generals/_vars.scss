@@ -1,5 +1,30 @@
 $black: #434242;
 $semi-black: #5b5b5b;
+$dark-grey: #444349;
+$semi-dark-grey: #504d53;
 $blue: #89acd2;
 $semi-blue: #d0deed;
 $grey: #f9f9f9;
+$semi-grey: #f0f0f0;
+
+$transition: all 0.5s ease;
+
+@mixin arrow {
+  &__arrow-left,
+  &__arrow-right {
+    position: absolute;
+    background-image: url("./assets/images/hexagon/hexagon_arrow_right.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 55px;
+    height: 60px;
+    transition: all 0.5s ease;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    &:hover {
+      background-image: url("./assets/images/hexagon/hexagon_arrow_right_light.png");
+    }
+  }
+}

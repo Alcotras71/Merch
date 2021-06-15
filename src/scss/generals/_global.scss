@@ -61,7 +61,7 @@ a {
   &--bold {
     font-weight: 700;
   }
-  &--medium {
+  &--medium-weight {
     font-weight: 500;
   }
   &--normal {
@@ -107,6 +107,15 @@ a {
   }
   &--black {
     background-color: $black;
+  }
+  &--dark-grey {
+    background-color: $dark-grey;
+  }
+  &--semi-dark-grey {
+    background-color: $semi-dark-grey;
+  }
+  &--semi-grey {
+    background-color: $semi-grey;
   }
 }
 
@@ -176,3 +185,60 @@ a {
 .semi-black {
   color: $semi-black;
 }
+.white {
+  color: #fff;
+}
+
+.btn {
+  width: 226px;
+  height: 43px;
+  background: $blue;
+  border-radius: 20px;
+  color: #fff;
+  transition: $transition;
+
+  &:hover {
+    background: $semi-blue;
+  }
+}
+
+.menu {
+  &__item {
+    margin-left: 70px;
+  }
+}
+
+.socials {
+  &__item {
+    margin-left: 35px;
+  }
+}
+
+.socials {
+  &__item {
+    path {
+      transition: $transition;
+    }
+
+    &:hover {
+      .hover {
+        &--blue {
+          fill: $blue;
+        }
+
+        &--white {
+          fill: #fff;
+        }
+
+        &--blue-stroke {
+          stroke: $blue;
+        }
+
+        &--white-stroke {
+          stroke: #fff;
+        }
+      }
+    }
+  }
+}
+

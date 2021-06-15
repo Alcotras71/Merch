@@ -1,4 +1,6 @@
 .solution {
+  position: relative;
+
   &__container {
     padding-top: 200px;
   }
@@ -13,20 +15,30 @@
     margin-right: 30px;
   }
 
-  &__title {
-  }
-
   &__inner {
+    z-index: 2;
     display: flex;
     width: 1250px;
     margin: 0 auto;
     padding: 0 100px;
     justify-content: space-between;
     position: relative;
+    margin-bottom: 245px;
+
+    .just-do__list {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__text-inner {
     margin-bottom: 45px;
+    max-width: 580px;
   }
 
   &__subtitle {
@@ -49,8 +61,20 @@
     position: relative;
     img {
       position: absolute;
+    }
+
+    .solution__notebook {
       top: 5%;
       right: -15%;
+    }
+
+    .solution__cards {
+      bottom: -40px;
+    }
+
+    .solution__vine {
+      width: 390px;
+      top: -25px;
     }
   }
 
@@ -59,22 +83,7 @@
     height: 390px;
   }
 
-  &__arrow-left,
-  &__arrow-right {
-    position: absolute;
-    background-image: url("./assets/images/hexagon/hexagon_arrow_right.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 55px;
-    height: 60px;
-    transition: all 0.5s ease;
-    top: 50%;
-    transform: translateY(-50%);
-
-    &:hover {
-      background-image: url("./assets/images/hexagon/hexagon_arrow_right_light.png");
-    }
-  }
+  @include arrow;
 
   &__arrow-left {
     left: 0;
@@ -83,5 +92,27 @@
 
   &__arrow-right {
     right: 0;
+  }
+
+  &__inner--last {
+    margin-bottom: 0;
+    padding-bottom: 137px;
+  }
+
+  &__box,
+  &__card {
+    position: absolute;
+  }
+
+  &__box {
+    top: 29%;
+    left: -5%;
+    width: 27vw;
+  }
+
+  &__card {
+    top: 62%;
+    right: -26%;
+    width: 45vw;
   }
 }

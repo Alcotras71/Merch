@@ -1,0 +1,137 @@
+.finished-solutions {
+  &__container {
+    padding-top: 190px;
+    padding-bottom: 150px;
+  }
+
+  &__slider-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__inner {
+    position: relative;
+    margin-bottom: 120px;
+  }
+
+  &__subtitle {
+    margin-bottom: 70px;
+  }
+
+  &__cup,
+  &__bag,
+  &__blocks,
+  &__recepts,
+  &__cards,
+  &__vine,
+  &__powerbank,
+  &__candle,
+  &__wood {
+    position: absolute;
+  }
+
+  &__cup {
+    bottom: 0;
+    left: -15px;
+    width: 370px;
+  }
+  &__bag {
+    width: 620px;
+    top: -100px;
+    left: -50px;
+  }
+  &__blocks {
+    top: -30px;
+  }
+  &__recepts {
+    width: 370px;
+    left: -45px;
+    top: -45px;
+  }
+  &__cards {
+    width: 310px;
+    bottom: -40px;
+    right: -20px;
+  }
+  &__powerbank {
+    left: 30px;
+    width: 530px;
+    bottom: 20px;
+  }
+  &__candle {
+    right: 15px;
+    width: 460px;
+    top: -40px;
+  }
+  &__vine {
+    width: 330px;
+    right: -20px;
+    bottom: -30px;
+  }
+  &__wood {
+    bottom: 0;
+    width: 311px;
+  }
+
+  &__slide {
+    cursor: pointer;
+  }
+
+  &__slider-text {
+    position: absolute;
+
+    span {
+      display: inline-block;
+    }
+
+    &--top {
+      width: 150px;
+      top: 15px;
+      left: 15px;
+
+      span {
+        padding-top: 15px;
+      }
+    }
+
+    &--bottom {
+      width: 320px;
+      bottom: 15px;
+      right: 15px;
+      text-align: right;
+
+      span {
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  &__square {
+    height: 300px;
+    position: relative;
+
+    &--small {
+      width: 323px;
+    }
+
+    &--big {
+      width: 646px;
+    }
+  }
+
+  @include arrow;
+
+  &__arrow-left,
+  &__arrow-right {
+    top: 30px;
+  }
+
+  &__arrow-left {
+    right: 100px;
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  &__arrow-right {
+    right: 0;
+  }
+}

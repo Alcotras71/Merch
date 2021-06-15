@@ -1,0 +1,46 @@
+.principles {
+  background: $grey;
+
+  &__container {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+
+
+
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 110px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__hexagon-inner {
+    padding-bottom: 25px;
+  }
+
+  &__number {
+    position: absolute;
+    font-size: 92px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -50%) rotate(-90deg);
+    color: #fff;
+  }
+
+  &__text {
+    text-align: center;
+  }
+}

@@ -1,0 +1,41 @@
+.clients {
+  padding-bottom: 200px;
+
+  &__container {
+    padding-bottom: 130px;
+  }
+
+  &__slider-wrapper {
+    display: flex;
+    margin-left: 30px;
+  }
+
+  &__slide {
+    cursor: pointer;
+
+    &:nth-child(odd) {
+      margin-top: -110px;
+    }
+
+    .hexagon {
+      transition: $transition;
+    }
+    &:hover {
+      .hexagon.bg--semi-blue {
+        background-color: $semi-grey;
+      }
+
+      .hexagon.bg--semi-grey {
+        background-color: $semi-blue;
+      }
+    }
+  }
+
+  &__number {
+    transform: translate(-50%, -50%);
+  }
+
+  &__hexagon {
+    transform: rotate(0);
+  }
+}

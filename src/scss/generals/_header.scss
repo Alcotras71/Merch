@@ -12,20 +12,30 @@
 
   &__menu {
     display: flex;
+
+    a {
+      transition: $transition;
+    }
+
+    a:hover {
+      color: $blue;
+    }
   }
 
   &__socials {
     display: flex;
   }
-}
 
-.menu {
-  &__item {
-    margin-left: 70px;
-  }
-}
-.socials {
-  &__item {
-    margin-left: 35px;
+  &__logo {
+    .hover--semi-blue {
+      transition: $transition;
+    }
+    &:hover {
+      .hover {
+        &--semi-blue {
+          fill: $semi-blue;
+        }
+      }
+    }
   }
 }

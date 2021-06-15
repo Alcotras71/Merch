@@ -1,0 +1,34 @@
+.work {
+  position: relative;
+
+  &__container {
+    padding-top: 93px;
+    padding-bottom: 100px;
+  }
+
+  &__list {
+    max-width: 1130px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 55px;
+  }
+
+  &__number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%) rotate(-90deg);
+    color: #fff;
+  }
+
+  &__scotch {
+    position: absolute;
+    top: 13%;
+    right: -11%;
+    width: 72vw;
+  }
+}
