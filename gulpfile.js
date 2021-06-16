@@ -152,5 +152,5 @@ gulp.task('clean', () => {
 
 gulp.task(
   'default',
-  gulp.series(gulp.parallel('clean'), gulp.parallel('server', 'watch', 'build'))
+  gulp.series(gulp.parallel('clean'), gulp.parallel('server', 'build', 'watch'))
 );

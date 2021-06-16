@@ -15,6 +15,10 @@
     margin-right: 30px;
   }
 
+  &__slider-container {
+    position: relative;
+  }
+
   &__inner {
     z-index: 2;
     display: flex;
@@ -37,7 +41,7 @@
   }
 
   &__text-inner {
-    margin-bottom: 45px;
+    margin-bottom: 40px;
     max-width: 580px;
   }
 
@@ -63,18 +67,63 @@
       position: absolute;
     }
 
-    .solution__notebook {
-      top: 5%;
-      right: -15%;
-    }
-
-    .solution__cards {
-      bottom: -40px;
-    }
-
-    .solution__vine {
-      width: 390px;
-      top: -25px;
+    .solution {
+      &__notebook {
+        top: 5%;
+        right: -15%;
+      }
+      &__cards {
+        bottom: -40px;
+      }
+      &__vine {
+        width: 390px;
+        top: 0;
+      }
+      &__cup {
+        width: 500px;
+        top: 20px;
+        right: -45px;
+      }
+      &__pen-book {
+        width: 500px;
+        right: -15px;
+        top: 10%;
+      }
+      &__bags {
+        width: 600px;
+        top: -16%;
+        right: -10%;
+      }
+      &__bag {
+        width: 550px;
+        top: 0;
+        right: -10%;
+      }
+      &__powerbank {
+        width: 630px;
+        top: 12%;
+        right: -20%;
+      }
+      &__bag-tnt {
+        width: 650px;
+        top: -5%;
+        right: -24%;
+      }
+      &__tea-box {
+        width: 500px;
+        top: -1%;
+        right: -10%;
+      }
+      &__candle {
+        width: 450px;
+        top: 10%;
+        right: 5%;
+      }
+      &__wood {
+        width: 420px;
+        top: 35%;
+        right: 2%;
+      }
     }
   }
 
@@ -86,12 +135,16 @@
   @include arrow;
 
   &__arrow-left {
-    left: 0;
+    top: 30%;
+    z-index: 5;
+    left: 6.5%;
     transform: rotate(180deg) translateY(50%);
   }
 
   &__arrow-right {
-    right: 0;
+    top: 30%;
+    z-index: 5;
+    right: 6.5%;
   }
 
   &__inner--last {
@@ -114,5 +167,17 @@
     top: 62%;
     right: -26%;
     width: 45vw;
+  }
+
+  &__slide {
+    transition: $transition
+  }
+
+  &__btn {
+    transition: $transition;
+
+    &:hover {
+      background-color: $semi-blue !important;
+    }
   }
 }
