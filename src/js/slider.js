@@ -7,6 +7,7 @@ const slider = (
   spaceBetween = 0,
   loop = true,
   slidesPerGroup = 1,
+  autoplay = false,
   grabCursor = true,
   direction = 'horizontal',
   speed = 1000
@@ -20,6 +21,7 @@ const slider = (
     slidesPerView,
     grabCursor,
     slidesPerGroup,
+    autoplay,
   });
 };
 

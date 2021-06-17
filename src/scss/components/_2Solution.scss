@@ -2,7 +2,7 @@
   position: relative;
 
   &__container {
-    padding-top: 200px;
+    padding-top: 160px;
   }
 
   &__title-wrapper {
@@ -31,6 +31,12 @@
 
     .just-do__list {
       margin-bottom: 0;
+    }
+  }
+
+  #solution-second {
+    .solution__inner {
+      margin-bottom: 200px;
     }
   }
 
@@ -159,18 +165,26 @@
 
   &__box {
     top: 29%;
-    left: -5%;
-    width: 27vw;
+    left: -17%;
+    transform: rotate(33deg) !important;
+
+    img {
+      width: 40vw;
+    }
   }
 
   &__card {
     top: 62%;
     right: -26%;
-    width: 45vw;
+    transform: rotate(-22deg) !important;
+
+    img {
+      width: 40vw;
+    }
   }
 
   &__slide {
-    transition: $transition
+    transition: $transition;
   }
 
   &__btn {
@@ -178,6 +192,104 @@
 
     &:hover {
       background-color: $semi-blue !important;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .solution {
+    &__container {
+      padding-top: 120px;
+    }
+
+    &__title-wrapper {
+      margin-bottom: 110px;
+    }
+
+    &__text-wrapper {
+      max-width: 430px;
+    }
+
+    &__text-inner {
+      margin-bottom: 15px;
+    }
+
+    &__subtitle {
+      padding-bottom: 35px;
+    }
+
+    &__inner {
+      width: 1000px;
+      margin-bottom: 180px;
+
+      &--last {
+        padding-bottom: 0;
+
+        margin-bottom: 100px;
+      }
+    }
+
+    &__square {
+      width: 330px;
+      height: 295px;
+    }
+
+    & #solution-second .solution__inner {
+      margin-bottom: 160px;
+    }
+
+    &__image-wrapper {
+      position: relative;
+      img {
+        position: absolute;
+      }
+
+      .solution {
+        &__notebook {
+          width: 30vw;
+        }
+        &__cards {
+          width: 25vw;
+        }
+        &__vine {
+          width: 22vw;
+        }
+        &__cup {
+          width: 28vw;
+          top: 10px;
+          right: -35px;
+        }
+        &__pen-book {
+          width: 28vw;
+        }
+        &__bags {
+          width: 32vw;
+          top: -10%;
+          right: -10%;
+        }
+        &__bag {
+          width: 29vw;
+        }
+        &__powerbank {
+          width: 32vw;
+        }
+        &__bag-tnt {
+          width: 32vw;
+        }
+        &__tea-box {
+          width: 26vw;
+          top: -1%;
+          right: -10%;
+        }
+        &__candle {
+          width: 25vw;
+        }
+        &__wood {
+          width: 22vw;
+          top: 30%;
+          right: 2%;
+        }
+      }
     }
   }
 }

@@ -161,3 +161,81 @@
     right: 0;
   }
 }
+
+@media (max-width: 1440px) {
+  .finished-solutions {
+    &__container {
+      padding-top: 140px;
+    }
+
+    &__square {
+      height: 220px;
+      position: relative;
+
+      &--small {
+        width: 245px;
+      }
+
+      &--big {
+        width: 490px;
+      }
+    }
+
+    &__cup {
+      left: -5%;
+      width: 19.5vw;
+    }
+    &__bag {
+      width: 33vw;
+      top: -32%;
+      left: -10%;
+    }
+    &__blocks {
+      top: -10%;
+      width: 20vw;
+    }
+    &__recepts {
+      width:20vw;
+      left: -4%;
+      top: -24%;
+    }
+    &__cards {
+      width: 18vw;
+      bottom: -18%;
+      right: -6%;
+    }
+    &__powerbank {
+      left: 5%;
+      width: 30vw;
+      bottom: 6%;
+    }
+    &__candle {
+      right: 4%;
+      width: 26vw;
+      top: -20%
+    }
+    &__vine {
+      width: 20vw;
+      right: -10%;
+      bottom: -15%;
+    }
+    &__wood {
+      right: 0;
+      width: 16vw;
+    }
+    &__school-bag {
+      top: -65%;
+      left: -5%;
+      width: 35vw;
+    }
+    &__pen-book {
+      width: 18vw;
+    }
+    &__bag-tnt {
+      width: 30vw;
+    }
+    &__tea-box {
+      width: 20vw;
+    }
+  }
+}

@@ -39,3 +39,16 @@
     }
   }
 }
+
+@media (max-width: 1440px) {
+  .header {
+    &__container {
+      margin-top: 30px;
+      margin-bottom: 90px;
+    }
+
+    svg {
+      width: 50px;
+    }
+  }
+}

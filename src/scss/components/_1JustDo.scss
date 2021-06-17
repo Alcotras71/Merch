@@ -27,11 +27,93 @@
 
   &__image {
     position: absolute;
-    top: -5%;
-    right: -3%;
 
-    img {
-      width: 62vw;
+    &--notebook {
+      top: -5%;
+      right: -3%;
+
+      img {
+        width: 52vw;
+      }
+    }
+    &--packages {
+      top: 55%;
+      right: 27%;
+
+      img {
+        width: 33vw;
+      }
+    }
+    &--charging {
+      top: 95%;
+      right: 0%;
+
+      img {
+        width: 27vw;
+      }
+    }
+    &--hook {
+      top: 45%;
+      right: 3%;
+
+      img {
+        width: 13vw;
+      }
+    }
+    &--mask {
+      top: 65%;
+      right: 16%;
+
+      img {
+        width: 28vw;
+      }
+    }
+    &--powerbank {
+      top: 14%;
+      right: 5%;
+
+      img {
+        width: 18vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .just-do {
+    &__title {
+      max-width: 702px;
+    }
+
+    &__subtitle {
+      margin-bottom: 131px;
+    }
+
+    &__list {
+      margin-bottom: 110px;
+      max-width: 360px;
+    }
+
+    &__image {
+      &--notebook {
+        top: -0%;
+      }
+      &--packages {
+        top: 48%;
+      }
+      &--charging {
+        top: 75%;
+      }
+      &--hook {
+        top: 40%;
+      }
+      &--mask {
+        top: 55%;
+      }
+      &--powerbank {
+        top: 13%;
+        right: 4%;
+      }
     }
   }
 }

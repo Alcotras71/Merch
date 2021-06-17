@@ -11,8 +11,6 @@
     padding: 100px 0;
   }
 
-
-
   &__slide {
     cursor: pointer;
 
@@ -40,5 +38,20 @@
 
   &__hexagon {
     transform: rotate(0);
+  }
+}
+
+@media (max-width:1440px) {
+  .clients {
+    &__hexagon {
+      img {
+        width: 10vw;
+      }
+    }
+
+    &__slider-wrapper {
+      padding-top: 120px;
+      padding-bottom: 80px;
+    }
   }
 }

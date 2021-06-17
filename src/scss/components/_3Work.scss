@@ -27,8 +27,29 @@
 
   &__scotch {
     position: absolute;
-    top: 13%;
+    top: 0%;
     right: -11%;
-    width: 72vw;
+
+    img {
+      width: 72vw;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .work {
+    &__container {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    &__list {
+      max-width: 730px;
+    }
+
+    &__item {
+      margin-left: -50px;
+      margin-bottom: 40px;
+    }
   }
 }

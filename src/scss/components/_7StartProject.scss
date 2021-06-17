@@ -46,13 +46,17 @@
 
     input {
       margin-top: 15px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       width: 490px;
       height: 43px;
       border: 1px solid #94959a;
       color: #94959a;
       font-size: 22px;
       padding-left: 20px;
+
+      &#email {
+        margin-bottom: 10px;
+      }
 
       &::placeholder {
         color: #c4c4c4;
@@ -118,8 +122,45 @@
 
   &__studio {
     position: absolute;
-    top: -12%;
-    right: -15%;
-    width: 38vw;
+    top: -10%;
+    right: -5%;
+    transform: rotate(-40deg) !important;
+
+    img {
+      width: 25vw;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .start-project {
+    &__hexagon {
+      img {
+        width: 2.2vw;
+      }
+    }
+
+    &__container {
+      padding-top: 80px;
+      padding-bottom: 100px;
+    }
+
+    &__text {
+      line-height: 70px;
+      max-width: 480px;
+    }
+
+    input {
+      width: 375px;
+      height: 32px;
+      margin-top: 6px;
+      font-size: 16px;
+      padding-left: 15px;
+    }
+
+    &__studio {
+      top: -10%;
+      right: -8%;
+    }
   }
 }

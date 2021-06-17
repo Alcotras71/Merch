@@ -23,3 +23,16 @@
     }
   }
 }
+
+@media (max-width: 1440px) {
+  .footer {
+    svg {
+      width: 50px;
+    }
+
+    &__container {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+}

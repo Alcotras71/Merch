@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Merch</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -13,7 +14,7 @@
       <header class="header">
         <div class="header__container container">
           <div class="header__logo logo">
-            <a href="#">
+            <a href="/">
               <svg
                 width="62"
                 height="69"
@@ -36,10 +37,12 @@
             </a>
           </div>
           <ul class="header__menu menu">
-            <li class="menu__item"><a href="#">о компании</a></li>
-            <li class="menu__item"><a href="#">готовые решения</a></li>
-            <li class="menu__item"><a href="#">наши работы</a></li>
-            <li class="menu__item"><a href="#">контакты</a></li>
+            <li class="menu__item"><a href="#work">о компании</a></li>
+            <li class="menu__item">
+              <a href="#finished-solution">готовые решения</a>
+            </li>
+            <li class="menu__item"><a href="#solution">наши работы</a></li>
+            <li class="menu__item"><a href="#contacts">контакты</a></li>
           </ul>
           <ul class="header__socials socials">
             <li class="socials__item">
@@ -159,8 +162,47 @@
               </li>
             </ul>
           </div>
-          <div class="just-do__image">
-            <img src="./assets/images/merch_main.png" alt="Мерч" />
+          <div class="just-do__image parallax just-do__image--notebook">
+            <img
+              data-depth="0.2"
+              src="./assets/images/main/notebook.png"
+              alt="Блокнот"
+            />
+          </div>
+          <div class="just-do__image parallax just-do__image--packages">
+            <img
+              data-depth-Y="-0.2"
+              src="./assets/images/main/packages.png"
+              alt="Пакеты"
+            />
+          </div>
+          <div class="just-do__image parallax just-do__image--charging">
+            <img
+              data-depth="-0.3"
+              src="./assets/images/main/charging.png"
+              alt="Зарядка"
+            />
+          </div>
+          <div class="just-do__image parallax just-do__image--hook">
+            <img
+              data-depth-X="-0.1"
+              src="./assets/images/main/hook.png"
+              alt="Крюк"
+            />
+          </div>
+          <div class="just-do__image parallax just-do__image--mask">
+            <img
+              data-depth-X="0.2"
+              src="./assets/images/main/mask.png"
+              alt="Маска"
+            />
+          </div>
+          <div class="just-do__image parallax just-do__image--powerbank">
+            <img
+              data-depth-X="0.2"
+              src="./assets/images/main/powerbank.png"
+              alt="Повербанк"
+            />
           </div>
         </section>
         <!--? -----------------------------------End just-do section-------------------------------- -->
@@ -173,7 +215,10 @@
                 <div class="hexagon-wrapper solution__hexagon hexagon--medium">
                   <div class="hexagon bg--semi-blue"></div>
                 </div>
-                <h2 class="solution__title title--big black ultrabold">
+                <h2
+                  id="solution"
+                  class="solution__title title--big black ultrabold"
+                >
                   решения:
                 </h2>
               </div>
@@ -865,22 +910,26 @@
               </div>
               <!-- END THIRD SLIDER -->
             </div>
-            <img
-              class="solution__box"
-              src="./assets/images/box.png"
-              alt="box"
-            />
-            <img
-              class="solution__card"
-              src="./assets/images/card.png"
-              alt="card"
-            />
+            <div class="parallax solution__box">
+              <img
+                data-depth-X="-0.5"
+                src="./assets/images/box.png"
+                alt="box"
+              />
+            </div>
+            <div class="solution__card parallax">
+              <img
+                data-depth-X="-0.3"
+                src="./assets/images/card.png"
+                alt="card"
+              />
+            </div>
           </section>
           <!--? -----------------------------------End solution section-------------------------------- -->
 
           <!--! -----------------------------------Start work section-------------------------------- -->
         </div>
-        <section class="work">
+        <section id="work" class="work">
           <div class="container work__container">
             <div class="solution__title-wrapper">
               <div class="hexagon-wrapper solution__hexagon hexagon--medium">
@@ -895,7 +944,7 @@
                 <div>
                   <div class="hexagon-wrapper solution__hexagon hexagon--arrow">
                     <div class="hexagon bg--semi-blue"></div>
-                    <span class="work__number text--medium">01</span>
+                    <span class="work__number">01</span>
                   </div>
                 </div>
                 <p class="work__item-text text--big">
@@ -907,7 +956,7 @@
                 <div>
                   <div class="hexagon-wrapper solution__hexagon hexagon--arrow">
                     <div class="hexagon bg--semi-blue"></div>
-                    <span class="work__number text--medium">02</span>
+                    <span class="work__number">02</span>
                   </div>
                 </div>
                 <p class="work__item-text text--big">
@@ -918,7 +967,7 @@
                 <div>
                   <div class="hexagon-wrapper solution__hexagon hexagon--arrow">
                     <div class="hexagon bg--semi-blue"></div>
-                    <span class="work__number text--medium">03</span>
+                    <span class="work__number">03</span>
                   </div>
                 </div>
                 <p class="work__item-text text--big">
@@ -930,7 +979,7 @@
                 <div>
                   <div class="hexagon-wrapper solution__hexagon hexagon--arrow">
                     <div class="hexagon bg--semi-blue"></div>
-                    <span class="work__number text--medium">04</span>
+                    <span class="work__number">04</span>
                   </div>
                 </div>
                 <p class="work__item-text text--big">
@@ -959,11 +1008,17 @@
               </li>
             </ul>
           </div>
-          <img
-            src="./assets/images/scotch.png"
-            alt="scotch"
-            class="work__scotch"
-          />
+          <div
+            class="work__scotch parallax rellax"
+            data-invert-y="true"
+            data-rellax-speed="-2"
+          >
+            <img
+              data-depth-Y="-0.2"
+              src="./assets/images/scotch.png"
+              alt="scotch"
+            />
+          </div>
         </section>
         <!--? -----------------------------------End work section-------------------------------- -->
 
@@ -1036,7 +1091,10 @@
               <div class="hexagon-wrapper solution__hexagon hexagon--medium">
                 <div class="hexagon bg--blue"></div>
               </div>
-              <h2 class="solution__title title--big black ultrabold">
+              <h2
+                id="finished-solution"
+                class="solution__title title--big black ultrabold"
+              >
                 готовые решения:
               </h2>
             </div>
@@ -1766,7 +1824,10 @@
                   />
                 </div>
               </div>
-              <h2 class="solution__title title--big black ultrabold">
+              <h2
+                id="contacts"
+                class="solution__title title--big black ultrabold"
+              >
                 начать проект:
               </h2>
             </div>
@@ -1797,14 +1858,15 @@
                     placeholder="Имя, Фамилия"
                   />
                 </label>
-                <label for="messanger">
+                <label for="email">
                   Свяжись со мной по <br />
                   <input
-                    id="messanger"
-                    name="messanger"
-                    type="text"
-                    placeholder="Whatsapp/Telegram/E-mail "
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="E-mail"
                   />
+                  <input id="tel" name="tel" type="tel" placeholder="Телефон" />
                 </label>
                 <label for="descr">
                   Сейчас я ищу <br />
@@ -1851,11 +1913,17 @@
               </form>
             </div>
           </div>
-          <img
-            class="start-project__studio"
-            src="./assets/images/studio_italia.png"
-            alt="studio_italia"
-          />
+          <div
+            class="start-project__studio parallax rellax"
+            data-invert-y="true"
+            data-rellax-speed="-2"
+          >
+            <img
+              data-depth-Y="-0.3"
+              src="./assets/images/studio_italia.png"
+              alt="studio_italia"
+            />
+          </div>
         </section>
         <!--? -----------------------------------End Start-project section-------------------------------- -->
       </main>
@@ -1863,14 +1931,18 @@
       <footer class="footer">
         <div class="footer__container container">
           <ul class="footer__menu menu">
-            <li class="menu__item"><a class="white" href="#">о компании</a></li>
             <li class="menu__item">
-              <a class="white" href="#">готовые решения</a>
+              <a class="white" href="#work">о компании</a>
             </li>
             <li class="menu__item">
-              <a class="white" href="#">наши работы</a>
+              <a class="white" href="#finished-solution">готовые решения</a>
             </li>
-            <li class="menu__item"><a class="white" href="#">контакты</a></li>
+            <li class="menu__item">
+              <a class="white" href="#solution">наши работы</a>
+            </li>
+            <li class="menu__item">
+              <a class="white" href="#contacts">контакты</a>
+            </li>
           </ul>
           <ul class="header__socials socials">
             <li class="socials__item">
