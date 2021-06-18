@@ -10,6 +10,10 @@ a {
   color: $black;
 }
 
+.main {
+  overflow-x: hidden;
+}
+
 .invisible-title {
   position: absolute !important;
   height: 1px;
@@ -322,5 +326,113 @@ a {
     height: 33px;
     border-radius: 15px;
     font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: none;
+    padding: 0 100px;
+  }
+
+  .title {
+    &--small {
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    &--medium {
+      font-size: 47px;
+    }
+
+    &--big {
+      font-size: 72px;
+      line-height: 86px;
+    }
+  }
+
+  .subtitle {
+    font-size: 47px;
+    line-height: 58px;
+  }
+
+  .text {
+    &--small {
+      font-size: 11px;
+      line-height: 11px;
+    }
+
+    &--medium {
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    &--big {
+      font-size: 19px;
+      line-height: 19px;
+    }
+  }
+
+  .hexagon {
+    &--small {
+      width: 12px;
+      height: 12px;
+    }
+    &--medium {
+      width: 56px;
+      height: 56px;
+
+      .hexagon,
+      .hexagon:after,
+      .hexagon:before {
+        border-radius: 4px;
+      }
+    }
+    &--big {
+      width: 150px;
+      height: 150px;
+    }
+
+    &--arrow {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .btn {
+    width: 102px;
+    height: 20px;
+    border-radius: 9px;
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+    line-height: 100%;
+  }
+
+  .title {
+    &--medium {
+      font-size: 24px;
+      line-height: 100%;
+    }
+
+    &--big {
+      font-size: 36px;
+      line-height: 43px;
+    }
+  }
+
+  .hexagon {
+    &--medium {
+      width: 36px;
+      height: 36px;
+    }
   }
 }

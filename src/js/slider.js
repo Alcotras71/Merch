@@ -1,28 +1,34 @@
 import Swiper from 'swiper/bundle';
 
-const slider = (
-  selector,
-  navigation = {},
-  slidesPerView = 1,
-  spaceBetween = 0,
-  loop = true,
-  slidesPerGroup = 1,
-  autoplay = false,
-  grabCursor = true,
-  direction = 'horizontal',
-  speed = 1000
-) => {
-  return new Swiper(selector, {
-    direction,
-    loop,
-    navigation,
-    speed,
-    spaceBetween,
-    slidesPerView,
-    grabCursor,
-    slidesPerGroup,
-    autoplay,
+export const solutionSlider = (count) => {
+  return new Swiper(`#solution-${count}`, {
+    loop: true,
+    navigation: {
+      nextEl: `#solution-${count}-right`,
+      prevEl: `#solution-${count}-left`,
+    },
+    speed: 1000,
+    grabCursor: true,
   });
 };
 
-export default slider;
+export const finishedSolutionSlider = (count) => {
+  return new Swiper(`#finished-solution-${count}`, {
+    navigation: {
+      nextEl: `#finished-solution-${count}-right`,
+      prevEl: `#finished-solution-${count}-left`,
+    },
+    loop: false,
+    slidesPerView: 'auto',
+    grabCursor: true,
+    slidesPerGroup: 2,
+    speed: 1000,
+    spaceBetween: 50,
+    breakpoints: {
+      1025: {
+        loop: true,
+        slidesPerGroup: 3,
+      },
+    },
+  });
+};

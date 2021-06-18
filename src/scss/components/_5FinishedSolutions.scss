@@ -101,6 +101,13 @@
 
   &__slide {
     cursor: pointer;
+
+    &--small {
+      width: calc(25% - 25px);
+    }
+    &--big {
+      width: calc(50% - 25px);
+    }
   }
 
   &__slider-text {
@@ -155,10 +162,18 @@
   &__arrow-left {
     right: 100px;
     transform: rotate(180deg) translateY(50%);
+
+    &.swiper-button-disabled {
+      background-image: url("./assets/images/hexagon/hexagon_arrow_right_light.png");
+    }
   }
 
   &__arrow-right {
     right: 0;
+
+    &.swiper-button-disabled {
+      background-image: url("./assets/images/hexagon/hexagon_arrow_right_light.png");
+    }
   }
 }
 
@@ -173,11 +188,11 @@
       position: relative;
 
       &--small {
-        width: 245px;
+        width: 100%;
       }
 
       &--big {
-        width: 490px;
+        width: 100%;
       }
     }
 
@@ -195,7 +210,7 @@
       width: 20vw;
     }
     &__recepts {
-      width:20vw;
+      width: 20vw;
       left: -4%;
       top: -24%;
     }
@@ -212,7 +227,7 @@
     &__candle {
       right: 4%;
       width: 26vw;
-      top: -20%
+      top: -20%;
     }
     &__vine {
       width: 20vw;
@@ -236,6 +251,130 @@
     }
     &__tea-box {
       width: 20vw;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .finished-solutions {
+    &__square {
+      height: 145px;
+    }
+
+    &__container {
+      padding-top: 50px;
+      padding-bottom: 0;
+    }
+
+    &__slider-wrapper {
+      padding: 30px 0;
+    }
+
+    &__slider-text {
+      font-size: 12px;
+      line-height: 13px;
+
+      &--bottom {
+        width: 160px;
+      }
+    }
+
+    &__slide {
+      &--small {
+        width: calc(34% - 25px);
+
+        &.tablet--big {
+          width: calc(66% - 25px);
+
+          .finished-solutions {
+            &__cards {
+              width: 25vw;
+              right: 5%;
+            }
+
+            &__wood {
+              width: 30vw;
+            }
+          }
+        }
+      }
+      &--big {
+        width: calc(66% - 25px);
+      }
+    }
+
+    &__cup {
+      top: 15%;
+      left: -2%;
+      width: 23vw;
+    }
+    &__bag {
+      width: 35vw;
+      top: -23%;
+      left: 2%;
+    }
+    &__blocks {
+      top: -10%;
+      left: 0;
+      width: 22vw;
+    }
+    &__recepts {
+      width: 23vw;
+    }
+    &__cards {
+      width: 18vw;
+      bottom: -18%;
+      right: -6%;
+    }
+    &__powerbank {
+      left: 5%;
+      width: 30vw;
+      bottom: 6%;
+    }
+    &__candle {
+      width: 33vw;
+      top: -22%;
+    }
+    &__vine {
+      right: 0%;
+    }
+    &__wood {
+      right: 0;
+      width: 16vw;
+    }
+    &__school-bag {
+      width: 44vw;
+    }
+    &__pen-book {
+      width: 27vw;
+      left: 10%;
+      top: -5%;
+    }
+    &__bag-tnt {
+      width: 40vw;
+      left: -5%;
+    }
+    &__tea-box {
+      width: 26vw;
+    }
+
+    &__arrow-left,
+    &__arrow-right {
+      width: 30px;
+      height: 30px;
+      background-size: contain;
+    }
+
+    &__arrow-left {
+      right: 50px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .finished-solutions {
+    &__slide {
+      @include bgFrame;
     }
   }
 }

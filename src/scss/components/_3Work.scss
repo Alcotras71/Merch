@@ -53,3 +53,54 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .work {
+    &__container {
+      padding-top: 50px;
+      padding-bottom: 15px;
+    }
+
+    &__title-wrapper {
+      margin-bottom: 50px;
+    }
+
+    &__list {
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    &__item {
+      margin-left: 0;
+      display: block;
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    &__hexagon-inner {
+      margin-right: 20px;
+    }
+
+    .solution__hexagon {
+      margin-right: 0;
+      margin-bottom: 14px;
+    }
+
+    &__scotch {
+      display: none;
+    }
+
+    &__number {
+      font-size: 27px;
+      line-height: 27px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .work {
+    &__list {
+      @include bgFrame;
+    }
+  }
+}

@@ -1,59 +1,30 @@
-import slider from './slider';
+import { finishedSolutionSlider, solutionSlider } from './slider';
+import Swiper from 'swiper/bundle';
 
 const initSliders = () => {
-  const solutionFirst = slider('#solution-first', {
-    nextEl: '#solution-first-right',
-    prevEl: '#solution-first-left',
-  });
+  const solutionFirst = solutionSlider('first');
+  const solutionSecond = solutionSlider('second');
+  const solutionThird = solutionSlider('third');
 
-  const solutionSecond = slider('#solution-second', {
-    nextEl: '#solution-second-right',
-    prevEl: '#solution-second-left',
-  });
+  const finishedSolutionFirst = finishedSolutionSlider('first');
+  const finishedSolutionSecond = finishedSolutionSlider('second');
+  const finishedSolutionThird = finishedSolutionSlider('third');
 
-  const solutionThird = slider('#solution-third', {
-    nextEl: '#solution-third-right',
-    prevEl: '#solution-third-left',
-  });
-
-  const finishedSolutionFirst = slider(
-    '#finished-solution-first',
-    {
-      nextEl: '#finished-solution-first-right',
-      prevEl: '#finished-solution-first-left',
+  const clientsSlider = new Swiper('#clients-slider', {
+    slidesPerView: 6,
+    spaceBetween: 100,
+    loop: true,
+    grabCursor: true,
+    autoplay: {
+      delay: 500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
-    'auto',
-    0,
-    true,
-    3
-  );
-
-  const finishedSolutionSecond = slider(
-    '#finished-solution-second',
-    {
-      nextEl: '#finished-solution-second-right',
-      prevEl: '#finished-solution-second-left',
+    breakpoints: {
+      1025: {
+        slidesPerView: 11,
+      },
     },
-    'auto',
-    0,
-    true,
-    3
-  );
-
-  const finishedSolutionThird = slider(
-    '#finished-solution-third',
-    {
-      nextEl: '#finished-solution-third-right',
-      prevEl: '#finished-solution-third-left',
-    },
-    'auto',
-    0,
-    true,
-    3
-  );
-
-  const clientsSlider = slider('#clients-slider', {}, 10, 100, true, 2, {
-    delay: 500,
   });
 };
 

@@ -126,6 +126,21 @@
               </a>
             </li>
           </ul>
+          <div class="header__contacts">
+            <div class="header__phone">
+              <a href="tel:+3727943500">(+372) 794 35 00</a>
+            </div>
+            <div class="header__mail">
+              <a href="mailto:EBShapoval@ya.">EBShapoval@ya.</a>
+            </div>
+          </div>
+          <div class="header__burger burger">
+            <div class="hexagon-wrapper">
+              <div class="hexagon bg--semi-blue">
+                <span class="burger__item"></span>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
       <!--? -----------------------------------End Header-------------------------------- -->
@@ -133,34 +148,59 @@
         <!--! -----------------------------------Start just-do section-------------------------------- -->
         <section class="just-do">
           <div class="container">
-            <h3 class="just-do__title title--medium ultrabold blue">
-              решаем задачи бизнеса с помощью полезного мерча
-            </h3>
-            <h3 class="just-do__subtitle subtitle ultrabold black">
-              #простоделаем
-            </h3>
-            <ul class="just-do__list text--medium">
-              <li class="just-do__item-wrapper">
-                <div class="hexagon-wrapper just-do__hexagon hexagon--small">
-                  <div class="hexagon bg--semi-blue"></div>
+            <div class="just-do__container">
+              <div class="just-do__title-wrapper">
+                <h3 class="just-do__title title--medium ultrabold blue">
+                  решаем задачи бизнеса с помощью полезного мерча
+                </h3>
+                <h3 class="just-do__subtitle subtitle ultrabold black">
+                  #простоделаем
+                </h3>
+                <div class="just-do__image-wrapper mobile">
+                  <img
+                    src="./assets/images/merch_main--mobile.png"
+                    alt="merch_main"
+                  />
                 </div>
-                <div class="just-do__item">Делаем актуальный мерч</div>
-              </li>
-              <li class="just-do__item-wrapper">
-                <div class="hexagon-wrapper just-do__hexagon hexagon--small">
-                  <div class="hexagon bg--semi-blue"></div>
-                </div>
-                <div class="just-do__item">Используем новые технологии</div>
-              </li>
-              <li class="just-do__item-wrapper">
-                <div class="hexagon-wrapper just-do__hexagon hexagon--small">
-                  <div class="hexagon bg--semi-blue"></div>
-                </div>
-                <div class="just-do__item">
-                  Помогаем нашим клиентам повышать лояльность к своему бренду
-                </div>
-              </li>
-            </ul>
+              </div>
+              <ul class="just-do__list text--medium">
+                <li class="just-do__item-wrapper">
+                  <div>
+                    <div
+                      class="hexagon-wrapper just-do__hexagon hexagon--small"
+                    >
+                      <div class="hexagon bg--semi-blue"></div>
+                    </div>
+                  </div>
+                  <div class="just-do__item">Делаем актуальный мерч</div>
+                </li>
+                <li class="just-do__item-wrapper">
+                  <div>
+                    <div
+                      class="hexagon-wrapper just-do__hexagon hexagon--small"
+                    >
+                      <div class="hexagon bg--semi-blue"></div>
+                    </div>
+                  </div>
+                  <div class="just-do__item">Используем новые технологии</div>
+                </li>
+                <li class="just-do__item-wrapper">
+                  <div>
+                    <div
+                      class="hexagon-wrapper just-do__hexagon hexagon--small"
+                    >
+                      <div class="hexagon bg--semi-blue"></div>
+                    </div>
+                  </div>
+                  <div class="just-do__item">
+                    Помогаем нашим клиентам повышать лояльность к своему бренду
+                  </div>
+                </li>
+              </ul>
+              <div class="just-do__btn-wrapper ">
+                <a href="#" class="btn just-do__btn mobile ultrabold">начать проект</a>
+              </div>
+            </div>
           </div>
           <div class="just-do__image parallax just-do__image--notebook">
             <img
@@ -932,8 +972,10 @@
         <section id="work" class="work">
           <div class="container work__container">
             <div class="solution__title-wrapper">
-              <div class="hexagon-wrapper solution__hexagon hexagon--medium">
-                <div class="hexagon bg--blue"></div>
+              <div class="work__hexagon-inner">
+                <div class="hexagon-wrapper solution__hexagon hexagon--medium">
+                  <div class="hexagon bg--blue"></div>
+                </div>
               </div>
               <h2 class="solution__title title--big black ultrabold">
                 как мы работаем
@@ -1088,8 +1130,10 @@
         <section class="finished-solutions">
           <div class="container finished-solutions__container">
             <div class="principles__title-wrapper">
-              <div class="hexagon-wrapper solution__hexagon hexagon--medium">
-                <div class="hexagon bg--blue"></div>
+              <div class="principles__hexagon-area">
+                <div class="hexagon-wrapper solution__hexagon hexagon--medium">
+                  <div class="hexagon bg--blue"></div>
+                </div>
               </div>
               <h2
                 id="finished-solution"
@@ -1113,8 +1157,7 @@
                 <div class="swiper-wrapper finished-solutions__slider-wrapper">
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide"
-                    style="width: 27.5%"
+                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--dark-grey"
@@ -1134,8 +1177,7 @@
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide"
-                    style="width: 50%"
+                    class="swiper-slide finished-solutions__slide finished-solutions__slide--big"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--big bg--semi-blue"
@@ -1155,8 +1197,7 @@
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide"
-                    style="width: 25%"
+                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--semi-blue"
@@ -1180,8 +1221,7 @@
 
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide"
-                    style="width: 50%"
+                    class="swiper-slide finished-solutions__slide finished-solutions__slide--big"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--big bg--semi-blue"
@@ -1201,8 +1241,7 @@
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide"
-                    style="width: 27%"
+                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--dark-grey"
@@ -1222,8 +1261,7 @@
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide"
-                    style="width: 25%"
+                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small tablet--big"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--semi-blue"
@@ -1268,8 +1306,7 @@
                 <div class="swiper-wrapper finished-solutions__slider-wrapper">
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide"
-                    style="width: 27.5%"
+                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--semi-blue"
@@ -1290,8 +1327,7 @@
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide"
-                    style="width: 27.5%"
+                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small tablet--big"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--dark-grey"
@@ -1312,8 +1348,7 @@
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide"
-                    style="width: 50%"
+                    class="swiper-slide finished-solutions__slide finished-solutions__slide--big"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--big bg--semi-dark-grey"
@@ -1337,8 +1372,7 @@
 
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide"
-                    style="width: 27.5%"
+                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--dark-grey"
@@ -1359,8 +1393,7 @@
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide"
-                    style="width: 50%"
+                    class="swiper-slide finished-solutions__slide finished-solutions__slide--big"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--big bg--semi-blue"
@@ -1381,8 +1414,7 @@
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide"
-                    style="width: 27.5%"
+                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--semi-blue"
@@ -1427,8 +1459,7 @@
                 <div class="swiper-wrapper finished-solutions__slider-wrapper">
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide"
-                    style="width: 50%"
+                    class="swiper-slide finished-solutions__slide finished-solutions__slide--big"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--big bg--black"
@@ -1450,8 +1481,7 @@
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide"
-                    style="width: 27.5%"
+                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--black"
@@ -1473,8 +1503,7 @@
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide"
-                    style="width: 25%"
+                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small tablet--big"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--semi-dark-grey"
@@ -1498,8 +1527,7 @@
 
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide"
-                    style="width: 27.5%"
+                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--black"
@@ -1521,8 +1549,7 @@
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide"
-                    style="width: 27.5%"
+                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--semi-dark-grey"
@@ -1543,8 +1570,7 @@
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide"
-                    style="width: 50%"
+                    class="swiper-slide finished-solutions__slide finished-solutions__slide--big"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--big bg--semi-dark-grey"
@@ -1583,8 +1609,10 @@
         <section class="clients">
           <div class="container clients__container">
             <div class="principles__title-wrapper">
-              <div class="hexagon-wrapper solution__hexagon hexagon--medium">
-                <div class="hexagon bg--semi-blue"></div>
+              <div>
+                <div class="hexagon-wrapper solution__hexagon hexagon--medium">
+                  <div class="hexagon bg--semi-blue"></div>
+                </div>
               </div>
               <h2 class="solution__title title--big black ultrabold">
                 наши клиенты:

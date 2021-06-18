@@ -44,8 +44,12 @@
       -moz-appearance: textfield;
     }
 
-    input {
-      margin-top: 15px;
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="number"] {
+      margin-top: 8px;
       margin-bottom: 20px;
       width: 490px;
       height: 43px;
@@ -132,6 +136,21 @@
   }
 }
 
+.form_button {
+  width: 100%;
+  font-size: 22px;
+  height: 43px;
+  background: #89acd2;
+  border-radius: 20px;
+  color: #fff;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background: #d0deed;
+    cursor: pointer;
+  }
+}
+
 @media (max-width: 1440px) {
   .start-project {
     &__hexagon {
@@ -161,6 +180,66 @@
     &__studio {
       top: -10%;
       right: -8%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .start-project {
+    &__hexagon {
+      img {
+        width: 23px;
+      }
+    }
+
+    &__container {
+      padding-bottom: 85px;
+    }
+
+    &__inner {
+      flex-direction: column-reverse;
+    }
+
+    &__form,
+    &__text-inner {
+      margin: 0 auto;
+    }
+
+    &__form {
+      margin-bottom: 50px;
+    }
+
+    &__text-inner {
+      text-align: center;
+    }
+
+    &__text {
+      margin-bottom: 50px;
+      max-width: none;
+    }
+
+    &__btn {
+      height: 43px;
+      border-radius: 28px;
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    &__studio {
+      top: -5%;
+      right: -5%;
+
+      img {
+        width: 35vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .start-project {
+    &__form {
+      @include bgFrame;
     }
   }
 }

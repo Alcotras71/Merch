@@ -41,7 +41,7 @@
   }
 }
 
-@media (max-width:1440px) {
+@media (max-width: 1440px) {
   .clients {
     &__hexagon {
       img {
@@ -52,6 +52,22 @@
     &__slider-wrapper {
       padding-top: 120px;
       padding-bottom: 80px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .clients {
+    padding-bottom: 0;
+
+    &__container {
+      padding-bottom: 0;
+    }
+
+    &__hexagon {
+      img {
+        width: 17vw;
+      }
     }
   }
 }

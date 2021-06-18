@@ -83,3 +83,35 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .principles {
+    &__container {
+      padding-top: 50px;
+      padding-bottom: 0;
+    }
+
+    &__list {
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    &__item {
+      width: 50%;
+      margin-bottom: 50px;
+    }
+
+    &__title-wrapper {
+      align-items: baseline;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .principles {
+    &__list {
+      @include bgFrame;
+    }
+  }
+}

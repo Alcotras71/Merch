@@ -36,3 +36,23 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .footer {
+    svg {
+      width: 36px;
+    }
+
+    &__container {
+      justify-content: flex-end;
+    }
+
+    &__menu {
+      top: -32px;
+
+      a {
+        color: $blue;
+      }
+    }
+  }
+}
