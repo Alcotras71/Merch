@@ -49,9 +49,52 @@
 
     &__menu {
       top: -32px;
+      display: none;
 
       a {
         color: $blue;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    background-color: #fff;
+
+    &__container {
+      padding: 0;
+      justify-content: center;
+    }
+
+    svg {
+      width: 50px;
+    }
+
+    .hover {
+      &--blue {
+        fill: $blue;
+      }
+
+      &--white {
+        fill: #fff;
+      }
+
+      &--blue-stroke {
+        stroke: $blue;
+      }
+
+      &--white-stroke {
+        stroke: #fff;
+      }
+    }
+
+    .socials {
+      justify-content: space-between;
+      width: 200px;
+
+      &__item {
+        margin: 0;
       }
     }
   }

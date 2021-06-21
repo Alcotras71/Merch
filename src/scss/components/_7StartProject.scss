@@ -238,8 +238,81 @@
 
 @media (max-width: 600px) {
   .start-project {
+    background-color: #fff;
+
+    &__container {
+      padding-top: 0;
+      padding-bottom: 20px;
+    }
+
+    .principles__title-wrapper {
+      align-items: flex-start;
+    }
+
+    .solution__hexagon {
+      margin-top: 6px;
+
+      img {
+        width: 15px;
+      }
+    }
+
     &__form {
       @include bgFrame;
+      width: 100%;
+      padding: 20px 0 10px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      label {
+        width: calc(100% - 20px);
+      }
+
+      input[type="text"],
+      input[type="date"],
+      input[type="tel"],
+      input[type="email"],
+      input[type="number"] {
+        font-size: 15px;
+        line-height: 15px;
+        width: 100%;
+        height: 30px;
+        border-radius: 200px;
+        padding-left: 10px;
+        margin-bottom: 17px;
+      }
+    }
+
+    &__text {
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    &__text-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 230px;
+    }
+
+    &__link {
+      margin-bottom: 10px;
+    }
+
+    &__btn {
+      width: calc(100% - 20px);
+      height: 55px;
+    }
+
+    &__studio {
+      z-index: 2;
+      top: 0%;
+      right: -15%;
+
+      img {
+        width: 37vw;
+      }
     }
   }
 }

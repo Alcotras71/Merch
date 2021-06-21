@@ -204,6 +204,9 @@ a {
   border-radius: 20px;
   color: #fff;
   transition: $transition;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background: $semi-blue;
@@ -248,6 +251,10 @@ a {
       }
     }
   }
+}
+
+.mobile {
+  display: none;
 }
 
 @media (max-width: 1440px) {
@@ -408,6 +415,10 @@ a {
 }
 
 @media (max-width: 600px) {
+  .mobile {
+    display: block;
+  }
+
   .container {
     padding: 0 10px;
   }

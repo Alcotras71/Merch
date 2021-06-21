@@ -103,10 +103,10 @@
     cursor: pointer;
 
     &--small {
-      width: calc(25% - 25px);
+      width: calc(25% - 30px);
     }
     &--big {
-      width: calc(50% - 25px);
+      width: calc(50% - 30px);
     }
   }
 
@@ -148,7 +148,7 @@
     }
 
     &--big {
-      width: 646px;
+      width: calc(100% - 25px);
     }
   }
 
@@ -375,6 +375,125 @@
   .finished-solutions {
     &__slide {
       @include bgFrame;
+      border-radius: 19px;
+    }
+
+    &__container {
+      padding-top: 25px;
+    }
+
+    .principles__title-wrapper {
+      align-items: flex-start;
+      margin-bottom: 25px;
+    }
+
+    &__inner {
+      padding-bottom: 60px;
+    }
+
+    .hexagon-wrapper {
+      margin-top: 6px;
+    }
+
+    &__slide {
+      display: flex;
+      justify-content: center;
+
+      &--small {
+        width: 48%;
+
+        &.tablet--big {
+          width: 48%;
+        }
+      }
+
+      &--big {
+        width: 48%;
+      }
+    }
+
+    &__square {
+      width: calc(100% - 10px);
+      border-radius: 15px;
+      margin-top: 5px;
+      margin-bottom: 100px;
+      height: 42vw;
+    }
+
+    &__subtitle {
+      color: $black;
+      padding-left: 40px;
+      margin-bottom: 0;
+    }
+
+    &__slider-text {
+      font-size: 14px;
+      line-height: 14px;
+      text-align: center;
+      color: #434242;
+      top: auto;
+      bottom: -75px;
+      left: 0;
+      width: calc(100% - 5px);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      height: 56px;
+
+      br {
+        display: none;
+      }
+
+      span {
+        position: absolute;
+        bottom: -5px;
+        padding: 0;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+
+    &__slider-wrapper {
+      padding: 15px 0 0 0;
+    }
+
+    &__cup,
+    &__bag,
+    &__blocks,
+    &__recepts,
+    &__cards,
+    &__vine,
+    &__powerbank,
+    &__candle,
+    &__wood,
+    &__school-bag,
+    &__pen-book,
+    &__bag-tnt,
+    &__tea-box {
+      width: 50vw !important;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &__cards,
+    &__wood {
+      width: 40vw !important;
+    }
+
+    &__arrow-left,
+    &__arrow-right {
+      width: 52px;
+      height: 58px;
+      top: 100%;
+    }
+
+    &__arrow-left {
+      left: 27vw;
+    }
+    &__arrow-right {
+      right: 27vw;
     }
   }
 }

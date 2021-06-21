@@ -389,7 +389,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .solution {
     &__container {
       padding-top: 35px;
@@ -399,11 +399,13 @@
       flex-direction: column;
       padding: 20px 10px;
       margin-bottom: 200px;
+      justify-content: space-between;
+      height: 370px;
     }
 
     #solution-second {
       .solution__inner {
-        margin-bottom: 130px;
+        margin-bottom: 200px;
       }
     }
 
@@ -418,6 +420,15 @@
 
     &__title-wrapper {
       margin-bottom: 20px;
+      align-items: flex-end;
+    }
+
+    &__hexagon {
+      margin-right: 10px;
+
+      .hexagon {
+        background-color: $blue;
+      }
     }
 
     &__text,
@@ -429,11 +440,11 @@
 
     .just-do__list {
       margin: 0;
-      margin-bottom: 44px;
     }
 
     &__slider-container {
       @include bgFrame;
+      margin-bottom: 20px;
     }
 
     &__text-inner {
@@ -443,6 +454,7 @@
     &__square {
       border-radius: 23px;
       width: 100%;
+      height: 39vw;
     }
 
     &__slide {
@@ -464,14 +476,55 @@
     &__arrow-right {
       width: 52px;
       height: 58px;
-      top: 78%;
+      top: 75%;
     }
 
     &__arrow-left {
-      left: 32%;
+      left: 27vw;
     }
     &__arrow-right {
-      right: 32%;
+      right: 27vw;
+    }
+
+    &__image-wrapper {
+      img {
+        top: 50% !important;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vw !important;
+      }
+
+      .solution {
+        &__cup {
+          width: 55vw !important;
+        }
+        &__cards,
+        &__vine,
+        &__wood {
+          width: 70vw !important;
+        }
+        &__tea-box {
+          width: 50vw !important;
+        }
+        &__candle {
+          width: 65vw!important;
+          top: 40%!important;
+        }
+      }
+    }
+
+    &__box {
+      display: none;
+    }
+
+    &__card {
+      bottom: -43%;
+      right: -55%;
+      z-index: 2;
+
+      img {
+        width: 80vw;
+      }
     }
   }
 }

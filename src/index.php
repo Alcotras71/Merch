@@ -1,11 +1,20 @@
+<?php
+/*
+Template Name: Главная страница
+*/
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Merch</title>
+	<title><?php echo CFS()->get( 'seo_title' ); ?></title>
+	<meta name="description" content="<?php echo CFS()->get( 'seo_description' ); ?>" />
+	<meta name="keywords" content="<?php echo CFS()->get( 'seo_keywords' ); ?>">
+	<?php wp_head(); ?>
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-main.css" />
   </head>
   <body>
     <h1 class="invisible-title">Полезный мерч</h1>
@@ -37,22 +46,16 @@
             </a>
           </div>
           <ul class="header__menu menu">
+            <li class="menu__item"><a href="#work">о компании</a></li>
             <li class="menu__item">
-              <a data-close href="#work">о компании</a>
+              <a href="#finished-solution">готовые решения</a>
             </li>
-            <li class="menu__item">
-              <a data-close href="#finished-solution">готовые решения</a>
-            </li>
-            <li class="menu__item">
-              <a data-close href="#solution">наши работы</a>
-            </li>
-            <li class="menu__item">
-              <a data-close href="#contacts">контакты</a>
-            </li>
+            <li class="menu__item"><a href="#solution">наши работы</a></li>
+            <li class="menu__item"><a href="#contacts">контакты</a></li>
           </ul>
           <ul class="header__socials socials">
             <li class="socials__item">
-              <a href="#">
+              <a href="mailto:<?php echo CFS()->get( 'email' ); ?>">
                 <svg
                   width="62"
                   height="69"
@@ -76,7 +79,7 @@
               </a>
             </li>
             <li class="socials__item">
-              <a href="#">
+              <a href="<?php echo CFS()->get( 'telega' ); ?>">
                 <svg
                   width="62"
                   height="69"
@@ -108,7 +111,7 @@
               </a>
             </li>
             <li class="socials__item">
-              <a href="#">
+              <a href="<?php echo CFS()->get( 'whatsapp' ); ?>">
                 <svg
                   width="62"
                   height="69"
@@ -132,21 +135,6 @@
               </a>
             </li>
           </ul>
-          <div class="header__contacts">
-            <div class="header__phone">
-              <a href="tel:+3727943500">(+372) 794 35 00</a>
-            </div>
-            <div class="header__mail">
-              <a href="mailto:EBShapoval@ya.ru">EBShapoval@ya.</a>
-            </div>
-          </div>
-          <div class="header__burger burger">
-            <div class="hexagon-wrapper">
-              <div class="hexagon bg--semi-blue">
-                <span class="burger__item"></span>
-              </div>
-            </div>
-          </div>
         </div>
       </header>
       <!--? -----------------------------------End Header-------------------------------- -->
@@ -154,61 +142,34 @@
         <!--! -----------------------------------Start just-do section-------------------------------- -->
         <section class="just-do">
           <div class="container">
-            <div class="just-do__container">
-              <div class="just-do__title-wrapper">
-                <h3 class="just-do__title title--medium ultrabold blue">
-                  решаем задачи бизнеса с помощью полезного мерча
-                </h3>
-                <h3 class="just-do__subtitle subtitle ultrabold black">
-                  #простоделаем
-                </h3>
-                <div class="just-do__image-wrapper mobile">
-                  <img
-                    src="./assets/images/merch_main--mobile.png"
-                    alt="merch_main"
-                  />
+            <h3 class="just-do__title title--medium ultrabold blue">
+              <?php echo CFS()->get( 'block_1_name' ); ?>
+            </h3>
+            <h3 class="just-do__subtitle subtitle ultrabold black">
+              <?php echo CFS()->get( 'block_1_hastag' ); ?>
+            </h3>
+            <ul class="just-do__list text--medium">
+              <li class="just-do__item-wrapper">
+                <div class="hexagon-wrapper just-do__hexagon hexagon--small">
+                  <div class="hexagon bg--semi-blue"></div>
                 </div>
-              </div>
-              <ul class="just-do__list text--medium">
-                <li class="just-do__item-wrapper">
-                  <div>
-                    <div
-                      class="hexagon-wrapper just-do__hexagon hexagon--small"
-                    >
-                      <div class="hexagon bg--semi-blue"></div>
-                    </div>
-                  </div>
-                  <div class="just-do__item">Делаем актуальный мерч</div>
-                </li>
-                <li class="just-do__item-wrapper">
-                  <div>
-                    <div
-                      class="hexagon-wrapper just-do__hexagon hexagon--small"
-                    >
-                      <div class="hexagon bg--semi-blue"></div>
-                    </div>
-                  </div>
-                  <div class="just-do__item">Используем новые технологии</div>
-                </li>
-                <li class="just-do__item-wrapper">
-                  <div>
-                    <div
-                      class="hexagon-wrapper just-do__hexagon hexagon--small"
-                    >
-                      <div class="hexagon bg--semi-blue"></div>
-                    </div>
-                  </div>
-                  <div class="just-do__item">
-                    Помогаем нашим клиентам повышать лояльность к своему бренду
-                  </div>
-                </li>
-              </ul>
-              <div class="just-do__btn-wrapper">
-                <a href="#contacts" class="btn just-do__btn mobile ultrabold">
-                  начать проект
-                </a>
-              </div>
-            </div>
+                <div class="just-do__item"><?php echo CFS()->get( 'block_1_p1' ); ?></div>
+              </li>
+              <li class="just-do__item-wrapper">
+                <div class="hexagon-wrapper just-do__hexagon hexagon--small">
+                  <div class="hexagon bg--semi-blue"></div>
+                </div>
+                <div class="just-do__item"><?php echo CFS()->get( 'block_1_p2' ); ?></div>
+              </li>
+              <li class="just-do__item-wrapper">
+                <div class="hexagon-wrapper just-do__hexagon hexagon--small">
+                  <div class="hexagon bg--semi-blue"></div>
+                </div>
+                <div class="just-do__item">
+                  <?php echo CFS()->get( 'block_1_p3' ); ?>
+                </div>
+              </li>
+            </ul>
           </div>
           <div class="just-do__image parallax just-do__image--notebook">
             <img
@@ -323,12 +284,9 @@
                             </div>
                           </li>
                         </ul>
-                        <a
-                          href="#contacts"
-                          class="solution__btn btn ultrabold text--small"
-                        >
+                        <button class="solution__btn btn ultrabold text--small">
                           начать проект
-                        </a>
+                        </button>
                       </div>
                       <div class="solution__image-wrapper">
                         <div class="solution__square bg--semi-blue">
@@ -388,12 +346,9 @@
                             </div>
                           </li>
                         </ul>
-                        <a
-                          href="#contacts"
-                          class="solution__btn btn ultrabold text--small"
-                        >
+                        <button class="solution__btn btn ultrabold text--small">
                           начать проект
-                        </a>
+                        </button>
                       </div>
                       <div class="solution__image-wrapper">
                         <div class="solution__square bg--cup">
@@ -453,12 +408,9 @@
                             </div>
                           </li>
                         </ul>
-                        <a
-                          href="#contacts"
-                          class="solution__btn btn ultrabold text--small"
-                        >
+                        <button class="solution__btn btn ultrabold text--small">
                           начать проект
-                        </a>
+                        </button>
                       </div>
                       <div class="solution__image-wrapper">
                         <div class="solution__square bg--dark-grey">
@@ -518,12 +470,9 @@
                             </div>
                           </li>
                         </ul>
-                        <a
-                          href="#contacts"
-                          class="solution__btn btn ultrabold text--small"
-                        >
+                        <button class="solution__btn btn ultrabold text--small">
                           начать проект
-                        </a>
+                        </button>
                       </div>
                       <div class="solution__image-wrapper">
                         <div class="solution__square bg--semi-blue">
@@ -583,12 +532,9 @@
                             </div>
                           </li>
                         </ul>
-                        <a
-                          href="#contacts"
-                          class="solution__btn btn ultrabold text--small"
-                        >
+                        <button class="solution__btn btn ultrabold text--small">
                           начать проект
-                        </a>
+                        </button>
                       </div>
                       <div class="solution__image-wrapper">
                         <div class="solution__square bg--semi-blue">
@@ -641,12 +587,9 @@
                             проявляйте заботу о них в течение года
                           </p>
                         </div>
-                        <a
-                          href="#contacts"
-                          class="solution__btn btn ultrabold text--small"
-                        >
+                        <button class="solution__btn btn ultrabold text--small">
                           начать проект
-                        </a>
+                        </button>
                       </div>
                       <div class="solution__image-wrapper">
                         <div class="solution__square bg--black">
@@ -681,12 +624,9 @@
                             поздравьте их
                           </p>
                         </div>
-                        <a
-                          href="#contacts"
-                          class="solution__btn btn ultrabold text--small"
-                        >
+                        <button class="solution__btn btn ultrabold text--small">
                           начать проект
-                        </a>
+                        </button>
                       </div>
                       <div class="solution__image-wrapper">
                         <div class="solution__square bg--semi-dark-grey">
@@ -733,12 +673,9 @@
                             <div class="just-do__item">Welcome набор</div>
                           </li>
                         </ul>
-                        <a
-                          href="#contacts"
-                          class="solution__btn btn ultrabold text--small"
-                        >
+                        <button class="solution__btn btn ultrabold text--small">
                           начать проект
-                        </a>
+                        </button>
                       </div>
                       <div class="solution__image-wrapper">
                         <div class="solution__square bg--semi-blue">
@@ -804,12 +741,9 @@
                             </div>
                           </li>
                         </ul>
-                        <a
-                          href="#contacts"
-                          class="solution__btn btn ultrabold text--small"
-                        >
+                        <button class="solution__btn btn ultrabold text--small">
                           начать проект
-                        </a>
+                        </button>
                       </div>
                       <div class="solution__image-wrapper">
                         <div class="solution__square bg--dark-grey">
@@ -857,12 +791,9 @@
                             </div>
                           </li>
                         </ul>
-                        <a
-                          href="#contacts"
-                          class="solution__btn btn ultrabold text--small"
-                        >
+                        <button class="solution__btn btn ultrabold text--small">
                           начать проект
-                        </a>
+                        </button>
                       </div>
                       <div class="solution__image-wrapper">
                         <div class="solution__square bg--dark-grey">
@@ -910,12 +841,9 @@
                             </div>
                           </li>
                         </ul>
-                        <a
-                          href="#contacts"
-                          class="solution__btn btn ultrabold text--small"
-                        >
+                        <button class="solution__btn btn ultrabold text--small">
                           начать проект
-                        </a>
+                        </button>
                       </div>
                       <div class="solution__image-wrapper">
                         <div class="solution__square bg--semi-dark-grey">
@@ -963,12 +891,9 @@
                             </div>
                           </li>
                         </ul>
-                        <a
-                          href="#contacts"
-                          class="solution__btn btn ultrabold text--small"
-                        >
+                        <button class="solution__btn btn ultrabold text--small">
                           начать проект
-                        </a>
+                        </button>
                       </div>
                       <div class="solution__image-wrapper">
                         <div class="solution__square bg--semi-dark-grey">
@@ -1016,10 +941,8 @@
         <section id="work" class="work">
           <div class="container work__container">
             <div class="solution__title-wrapper">
-              <div class="work__hexagon-inner">
-                <div class="hexagon-wrapper solution__hexagon hexagon--medium">
-                  <div class="hexagon bg--blue"></div>
-                </div>
+              <div class="hexagon-wrapper solution__hexagon hexagon--medium">
+                <div class="hexagon bg--blue"></div>
               </div>
               <h2 class="solution__title title--big black ultrabold">
                 как мы работаем
@@ -1027,69 +950,69 @@
             </div>
             <ul class="work__list">
               <li class="work__item">
-                <div class="work__item-wrapper">
-                  <div class="hexagon-wrapper hexagon--arrow">
+                <div>
+                  <div class="hexagon-wrapper solution__hexagon hexagon--arrow">
                     <div class="hexagon bg--semi-blue"></div>
-                    <span class="work__number text--medium">01</span>
+                    <span class="work__number">01</span>
                   </div>
                 </div>
                 <p class="work__item-text text--big">
-                  прежде чем сделать для вас подборку подарков наши менеджеры
-                  спросят о ваших потребностях и бюджете
+                  <?php echo CFS()->get( 'block_3_1' ); ?>
                 </p>
               </li>
               <li class="work__item">
-                <div class="work__item-wrapper">
-                  <div class="hexagon-wrapper hexagon--arrow">
+                <div>
+                  <div class="hexagon-wrapper solution__hexagon hexagon--arrow">
                     <div class="hexagon bg--semi-blue"></div>
-                    <span class="work__number text--medium">02</span>
+                    <span class="work__number">02</span>
                   </div>
                 </div>
                 <p class="work__item-text text--big">
-                  подготовят для вас предложение за одни сутки
+                 <?php echo CFS()->get( 'block_3_2' ); ?>
                 </p>
               </li>
               <li class="work__item">
-                <div class="work__item-wrapper">
-                  <div class="hexagon-wrapper hexagon--arrow">
+                <div>
+                  <div class="hexagon-wrapper solution__hexagon hexagon--arrow">
                     <div class="hexagon bg--semi-blue"></div>
-                    <span class="work__number text--medium">03</span>
+                    <span class="work__number">03</span>
                   </div>
                 </div>
                 <p class="work__item-text text--big">
-                  расскажут о креативных способах брендирования и согласуют
-                  способы нанесения лого
+				<?php echo CFS()->get( 'block_3_3' ); ?>
                 </p>
               </li>
               <li class="work__item">
-                <div class="work__item-wrapper">
-                  <div class="hexagon-wrapper hexagon--arrow">
+                <div>
+                  <div class="hexagon-wrapper solution__hexagon hexagon--arrow">
                     <div class="hexagon bg--semi-blue"></div>
-                    <span class="work__number text--medium">04</span>
+                    <span class="work__number">04</span>
                   </div>
                 </div>
                 <p class="work__item-text text--big">
-                  оформят все необходимые документы
+                  <?php echo CFS()->get( 'block_3_4' ); ?>
                 </p>
               </li>
               <li class="work__item">
-                <div class="work__item-wrapper">
-                  <div class="hexagon-wrapper hexagon--arrow">
+                <div>
+                  <div class="hexagon-wrapper solution__hexagon hexagon--arrow">
                     <div class="hexagon bg--semi-blue"></div>
                     <span class="work__number text--medium">05</span>
                   </div>
                 </div>
-                <p class="work__item-text text--big">запустят в производство</p>
+                <p class="work__item-text text--big">
+				<?php echo CFS()->get( 'block_3_5' ); ?>
+				</p>
               </li>
               <li class="work__item">
-                <div class="work__item-wrapper">
-                  <div class="hexagon-wrapper hexagon--arrow">
+                <div>
+                  <div class="hexagon-wrapper solution__hexagon hexagon--arrow">
                     <div class="hexagon bg--semi-blue"></div>
                     <span class="work__number text--medium">06</span>
                   </div>
                 </div>
                 <p class="work__item-text text--big">
-                  организуют удобную доставку
+                  <?php echo CFS()->get( 'block_3_6' ); ?>
                 </p>
               </li>
             </ul>
@@ -1128,7 +1051,7 @@
                   </div>
                 </div>
                 <p class="text--medium ultrabold principles__text">
-                  Современность
+                  <?php echo CFS()->get( 'block_4_1' ); ?>
                 </p>
               </li>
 
@@ -1140,7 +1063,7 @@
                   </div>
                 </div>
                 <p class="text--medium ultrabold principles__text">
-                  Простота и минимализм
+                  <?php echo CFS()->get( 'block_4_2' ); ?>
                 </p>
               </li>
 
@@ -1152,7 +1075,7 @@
                   </div>
                 </div>
                 <p class="text--medium ultrabold principles__text">
-                  Функциональность и осознанность
+                  <?php echo CFS()->get( 'block_4_3' ); ?>
                 </p>
               </li>
 
@@ -1163,7 +1086,9 @@
                     <span class="principles__number text--medium">04</span>
                   </div>
                 </div>
-                <p class="text--medium ultrabold principles__text">Забота</p>
+                <p class="text--medium ultrabold principles__text">
+				<?php echo CFS()->get( 'block_4_4' ); ?>
+				</p>
               </li>
             </ul>
           </div>
@@ -1174,10 +1099,8 @@
         <section class="finished-solutions">
           <div class="container finished-solutions__container">
             <div class="principles__title-wrapper">
-              <div class="principles__hexagon-area">
-                <div class="hexagon-wrapper solution__hexagon hexagon--medium">
-                  <div class="hexagon bg--blue"></div>
-                </div>
+              <div class="hexagon-wrapper solution__hexagon hexagon--medium">
+                <div class="hexagon bg--blue"></div>
               </div>
               <h2
                 id="finished-solution"
@@ -1200,72 +1123,67 @@
                 <!-- Wrapper -->
                 <div class="swiper-wrapper finished-solutions__slider-wrapper">
                   <!-- Slide -->
-
                   <div
-                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small"
+                    class="swiper-slide finished-solutions__slide"
+                    style="width: 27.5%"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--dark-grey"
                     >
-                      <a href="#contacts">
-                        <p
-                          class="finished-solutions__slider-text white finished-solutions__slider-text--top text--medium"
-                        >
-                          Блок наборы <br />
-                          <span class="text--bold">от 444р</span>
-                        </p>
-                        <img
-                          class="finished-solutions__cup"
-                          src="./assets/images/cup.png"
-                          alt="cup"
-                        />
-                      </a>
+                      <p
+                        class="finished-solutions__slider-text white finished-solutions__slider-text--top text--medium"
+                      >
+                        Блок наборы <br />
+                        <span class="text--bold">от 444р</span>
+                      </p>
+                      <img
+                        class="finished-solutions__cup"
+                        src="./assets/images/cup.png"
+                        alt="cup"
+                      />
                     </div>
                   </div>
-
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide finished-solutions__slide--big"
+                    class="swiper-slide finished-solutions__slide"
+                    style="width: 50%"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--big bg--semi-blue"
                     >
-                      <a href="#contacts">
-                        <p
-                          class="finished-solutions__slider-text text--medium finished-solutions__slider-text--bottom"
-                        >
-                          <span class="text--bold">от 444р</span> <br />
-                          Блок набор для мероприятия
-                        </p>
-                        <img
-                          class="finished-solutions__bag"
-                          src="./assets/images/bag.png"
-                          alt="bag"
-                        />
-                      </a>
+                      <p
+                        class="finished-solutions__slider-text text--medium finished-solutions__slider-text--bottom"
+                      >
+                        <span class="text--bold">от 444р</span> <br />
+                        Блок набор для безопасного мероприятия
+                      </p>
+                      <img
+                        class="finished-solutions__bag"
+                        src="./assets/images/bag.png"
+                        alt="bag"
+                      />
                     </div>
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small"
+                    class="swiper-slide finished-solutions__slide"
+                    style="width: 25%"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--semi-blue"
                     >
-                      <a href="#contacts">
-                        <p
-                          class="finished-solutions__slider-text text--medium finished-solutions__slider-text--bottom"
-                        >
-                          <span class="text--bold">от 444р</span> <br />
-                          Блок наборы <br />
-                          для мероприятий
-                        </p>
-                        <img
-                          class="finished-solutions__blocks"
-                          src="./assets/images/blocks.png"
-                          alt="blocks"
-                        />
-                      </a>
+                      <p
+                        class="finished-solutions__slider-text text--medium finished-solutions__slider-text--bottom"
+                      >
+                        <span class="text--bold">от 444р</span> <br />
+                        Блок наборы <br />
+                        для мероприятий
+                      </p>
+                      <img
+                        class="finished-solutions__blocks"
+                        src="./assets/images/blocks.png"
+                        alt="blocks"
+                      />
                     </div>
                   </div>
 
@@ -1273,69 +1191,66 @@
 
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide finished-solutions__slide--big"
+                    class="swiper-slide finished-solutions__slide"
+                    style="width: 50%"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--big bg--semi-blue"
                     >
-                      <a href="#contacts">
-                        <p
-                          class="finished-solutions__slider-text text--medium finished-solutions__slider-text--bottom"
-                        >
-                          <span class="text--bold">от 444р</span> <br />
-                          Блок набор для мероприятия
-                        </p>
-                        <img
-                          class="finished-solutions__school-bag"
-                          src="./assets/images/school_bag.png"
-                          alt="school_bag"
-                        />
-                      </a>
+                      <p
+                        class="finished-solutions__slider-text text--medium finished-solutions__slider-text--bottom"
+                      >
+                        <span class="text--bold">от 444р</span> <br />
+                        Блок набор для безопасного мероприятия
+                      </p>
+                      <img
+                        class="finished-solutions__school-bag"
+                        src="./assets/images/school_bag.png"
+                        alt="school_bag"
+                      />
                     </div>
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small"
+                    class="swiper-slide finished-solutions__slide"
+                    style="width: 27%"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--dark-grey"
                     >
-                      <a href="#contacts">
-                        <p
-                          class="finished-solutions__slider-text white finished-solutions__slider-text--top text--medium"
-                        >
-                          Блок наборы <br />
-                          <span class="text--bold">от 444р</span>
-                        </p>
-                        <img
-                          class="finished-solutions__cup"
-                          src="./assets/images/cup.png"
-                          alt="cup"
-                        />
-                      </a>
+                      <p
+                        class="finished-solutions__slider-text white finished-solutions__slider-text--top text--medium"
+                      >
+                        Блок наборы <br />
+                        <span class="text--bold">от 444р</span>
+                      </p>
+                      <img
+                        class="finished-solutions__cup"
+                        src="./assets/images/cup.png"
+                        alt="cup"
+                      />
                     </div>
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small tablet--big"
+                    class="swiper-slide finished-solutions__slide"
+                    style="width: 25%"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--semi-blue"
                     >
-                      <a href="#contacts">
-                        <p
-                          class="finished-solutions__slider-text text--medium finished-solutions__slider-text--bottom"
-                        >
-                          <span class="text--bold">от 444р</span> <br />
-                          Блок наборы <br />
-                          для мероприятий
-                        </p>
-                        <img
-                          class="finished-solutions__pen-book"
-                          src="./assets/images/pen_book.png"
-                          alt="pen_book"
-                        />
-                      </a>
+                      <p
+                        class="finished-solutions__slider-text text--medium finished-solutions__slider-text--bottom"
+                      >
+                        <span class="text--bold">от 444р</span> <br />
+                        Блок наборы <br />
+                        для мероприятий
+                      </p>
+                      <img
+                        class="finished-solutions__pen-book"
+                        src="./assets/images/pen_book.png"
+                        alt="pen_book"
+                      />
                     </div>
                   </div>
                 </div>
@@ -1364,71 +1279,68 @@
                 <div class="swiper-wrapper finished-solutions__slider-wrapper">
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small"
+                    class="swiper-slide finished-solutions__slide"
+                    style="width: 27.5%"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--semi-blue"
                     >
-                      <a href="#contacts">
-                        <p
-                          class="finished-solutions__slider-text finished-solutions__slider-text--bottom text--medium"
-                        >
-                          <span class="text--bold">от 444р</span> <br />
-                          Блок набор <br />
-                          сотрудники
-                        </p>
-                        <img
-                          class="finished-solutions__recepts"
-                          src="./assets/images/recepts.png"
-                          alt="recepts"
-                        />
-                      </a>
+                      <p
+                        class="finished-solutions__slider-text finished-solutions__slider-text--bottom text--medium"
+                      >
+                        <span class="text--bold">от 444р</span> <br />
+                        Блок набор <br />
+                        сотрудники
+                      </p>
+                      <img
+                        class="finished-solutions__recepts"
+                        src="./assets/images/recepts.png"
+                        alt="recepts"
+                      />
                     </div>
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small tablet--big"
+                    class="swiper-slide finished-solutions__slide"
+                    style="width: 27.5%"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--dark-grey"
                     >
-                      <a href="#contacts">
-                        <p
-                          class="finished-solutions__slider-text finished-solutions__slider-text--top white text--medium"
-                        >
-                          Блок набор <br />
-                          сотрудники <br />
-                          <span class="text--bold">от 444р</span>
-                        </p>
-                        <img
-                          class="finished-solutions__cards"
-                          src="./assets/images/cards.png"
-                          alt="cards"
-                        />
-                      </a>
+                      <p
+                        class="finished-solutions__slider-text finished-solutions__slider-text--top white text--medium"
+                      >
+                        Блок набор <br />
+                        сотрудники <br />
+                        <span class="text--bold">от 444р</span>
+                      </p>
+                      <img
+                        class="finished-solutions__cards"
+                        src="./assets/images/cards.png"
+                        alt="cards"
+                      />
                     </div>
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide finished-solutions__slide--big"
+                    class="swiper-slide finished-solutions__slide"
+                    style="width: 50%"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--big bg--semi-dark-grey"
                     >
-                      <a href="#contacts">
-                        <p
-                          class="finished-solutions__slider-text text--medium white finished-solutions__slider-text--bottom"
-                        >
-                          <span class="text--bold">от 444р</span> <br />
-                          Блок набор <br />
-                          сотрудники
-                        </p>
-                        <img
-                          class="finished-solutions__powerbank"
-                          src="./assets/images/powerbank.png"
-                          alt="powerbank"
-                        />
-                      </a>
+                      <p
+                        class="finished-solutions__slider-text text--medium white finished-solutions__slider-text--bottom"
+                      >
+                        <span class="text--bold">от 444р</span> <br />
+                        блок набор <br />
+                        сотрудники
+                      </p>
+                      <img
+                        class="finished-solutions__powerbank"
+                        src="./assets/images/powerbank.png"
+                        alt="powerbank"
+                      />
                     </div>
                   </div>
 
@@ -1436,71 +1348,68 @@
 
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small"
+                    class="swiper-slide finished-solutions__slide"
+                    style="width: 27.5%"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--dark-grey"
                     >
-                      <a href="#contacts">
-                        <p
-                          class="finished-solutions__slider-text finished-solutions__slider-text--top white text--medium"
-                        >
-                          Блок набор <br />
-                          сотрудники <br />
-                          <span class="text--bold">от 444р</span>
-                        </p>
-                        <img
-                          class="finished-solutions__cards"
-                          src="./assets/images/cards.png"
-                          alt="cards"
-                        />
-                      </a>
+                      <p
+                        class="finished-solutions__slider-text finished-solutions__slider-text--top white text--medium"
+                      >
+                        Блок набор <br />
+                        сотрудники <br />
+                        <span class="text--bold">от 444р</span>
+                      </p>
+                      <img
+                        class="finished-solutions__cards"
+                        src="./assets/images/cards.png"
+                        alt="cards"
+                      />
                     </div>
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide finished-solutions__slide--big"
+                    class="swiper-slide finished-solutions__slide"
+                    style="width: 50%"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--big bg--semi-blue"
                     >
-                      <a href="#contacts">
-                        <p
-                          class="finished-solutions__slider-text text--medium white finished-solutions__slider-text--bottom"
-                        >
-                          <span class="text--bold">от 444р</span> <br />
-                          Блок набор <br />
-                          сотрудники
-                        </p>
-                        <img
-                          class="finished-solutions__bag-tnt"
-                          src="./assets/images/bag_tnt.png"
-                          alt="bag_tnt"
-                        />
-                      </a>
+                      <p
+                        class="finished-solutions__slider-text text--medium white finished-solutions__slider-text--bottom"
+                      >
+                        <span class="text--bold">от 444р</span> <br />
+                        блок набор <br />
+                        сотрудники
+                      </p>
+                      <img
+                        class="finished-solutions__bag-tnt"
+                        src="./assets/images/bag_tnt.png"
+                        alt="bag_tnt"
+                      />
                     </div>
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small"
+                    class="swiper-slide finished-solutions__slide"
+                    style="width: 27.5%"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--semi-blue"
                     >
-                      <a href="#contacts">
-                        <p
-                          class="finished-solutions__slider-text finished-solutions__slider-text--bottom text--medium"
-                        >
-                          <span class="text--bold">от 444р</span> <br />
-                          Блок набор <br />
-                          сотрудники
-                        </p>
-                        <img
-                          class="finished-solutions__recepts"
-                          src="./assets/images/recepts.png"
-                          alt="recepts"
-                        />
-                      </a>
+                      <p
+                        class="finished-solutions__slider-text finished-solutions__slider-text--bottom text--medium"
+                      >
+                        <span class="text--bold">от 444р</span> <br />
+                        Блок набор <br />
+                        сотрудники
+                      </p>
+                      <img
+                        class="finished-solutions__recepts"
+                        src="./assets/images/recepts.png"
+                        alt="recepts"
+                      />
                     </div>
                   </div>
                 </div>
@@ -1518,7 +1427,7 @@
             <!-- SOLUTION 3 -->
             <div class="finished-solutions__inner">
               <h3 class="finished-solutions__subtitle title--small ultrabold">
-                клиенты
+                Клиенты
               </h3>
               <!-- Container -->
               <div
@@ -1529,73 +1438,70 @@
                 <div class="swiper-wrapper finished-solutions__slider-wrapper">
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide finished-solutions__slide--big"
+                    class="swiper-slide finished-solutions__slide"
+                    style="width: 50%"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--big bg--black"
                     >
-                      <a href="#contacts">
-                        <p
-                          class="finished-solutions__slider-text text--medium white finished-solutions__slider-text--top"
-                        >
-                          Блок набор <br />
-                          постоянные <br />
-                          клиенты <br />
-                          <span class="text--bold">от 444р</span>
-                        </p>
-                        <img
-                          class="finished-solutions__candle"
-                          src="./assets/images/candle.png"
-                          alt="candle"
-                        />
-                      </a>
+                      <p
+                        class="finished-solutions__slider-text text--medium white finished-solutions__slider-text--top"
+                      >
+                        Блок набор <br />
+                        постоянные <br />
+                        клиенты <br />
+                        <span class="text--bold">от 444р</span>
+                      </p>
+                      <img
+                        class="finished-solutions__candle"
+                        src="./assets/images/candle.png"
+                        alt="candle"
+                      />
                     </div>
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small"
+                    class="swiper-slide finished-solutions__slide"
+                    style="width: 27.5%"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--black"
                     >
-                      <a href="#contacts">
-                        <p
-                          class="finished-solutions__slider-text finished-solutions__slider-text--top text--medium white"
-                        >
-                          Блок набор <br />
-                          постоянные <br />
-                          клиенты <br />
-                          <span class="text--bold">от 444р</span>
-                        </p>
-                        <img
-                          class="finished-solutions__vine"
-                          src="./assets/images/vine.png"
-                          alt="vine"
-                        />
-                      </a>
+                      <p
+                        class="finished-solutions__slider-text finished-solutions__slider-text--top text--medium white"
+                      >
+                        Блок набор <br />
+                        постоянные <br />
+                        клиенты <br />
+                        <span class="text--bold">от 444р</span>
+                      </p>
+                      <img
+                        class="finished-solutions__vine"
+                        src="./assets/images/vine.png"
+                        alt="vine"
+                      />
                     </div>
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small tablet--big"
+                    class="swiper-slide finished-solutions__slide"
+                    style="width: 25%"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--semi-dark-grey"
                     >
-                      <a href="#contacts">
-                        <p
-                          class="finished-solutions__slider-text finished-solutions__slider-text--top text--medium white"
-                        >
-                          Блок набор <br />
-                          постоянные клиенты <br />
-                          <span class="text--bold">от 444р</span>
-                        </p>
-                        <img
-                          class="finished-solutions__wood"
-                          src="./assets/images/wood.png"
-                          alt="wood"
-                        />
-                      </a>
+                      <p
+                        class="finished-solutions__slider-text finished-solutions__slider-text--top text--medium white"
+                      >
+                        Блок набор <br />
+                        постоянные клиенты <br />
+                        <span class="text--bold">от 444р</span>
+                      </p>
+                      <img
+                        class="finished-solutions__wood"
+                        src="./assets/images/wood.png"
+                        alt="wood"
+                      />
                     </div>
                   </div>
 
@@ -1603,73 +1509,70 @@
 
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small"
+                    class="swiper-slide finished-solutions__slide"
+                    style="width: 27.5%"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--black"
                     >
-                      <a href="#contacts">
-                        <p
-                          class="finished-solutions__slider-text finished-solutions__slider-text--top text--medium white"
-                        >
-                          Блок набор <br />
-                          постоянные <br />
-                          клиенты <br />
-                          <span class="text--bold">от 444р</span>
-                        </p>
-                        <img
-                          class="finished-solutions__vine"
-                          src="./assets/images/vine.png"
-                          alt="vine"
-                        />
-                      </a>
+                      <p
+                        class="finished-solutions__slider-text finished-solutions__slider-text--top text--medium white"
+                      >
+                        Блок набор <br />
+                        постоянные <br />
+                        клиенты <br />
+                        <span class="text--bold">от 444р</span>
+                      </p>
+                      <img
+                        class="finished-solutions__vine"
+                        src="./assets/images/vine.png"
+                        alt="vine"
+                      />
                     </div>
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide finished-solutions__slide--small"
+                    class="swiper-slide finished-solutions__slide"
+                    style="width: 27.5%"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--small bg--semi-dark-grey"
                     >
-                      <a href="#contacts">
-                        <p
-                          class="finished-solutions__slider-text finished-solutions__slider-text--top text--medium white"
-                        >
-                          Блок набор <br />
-                          постоянные клиенты <br />
-                          <span class="text--bold">от 444р</span>
-                        </p>
-                        <img
-                          class="finished-solutions__wood"
-                          src="./assets/images/wood.png"
-                          alt="wood"
-                        />
-                      </a>
+                      <p
+                        class="finished-solutions__slider-text finished-solutions__slider-text--top text--medium white"
+                      >
+                        Блок набор <br />
+                        постоянные клиенты <br />
+                        <span class="text--bold">от 444р</span>
+                      </p>
+                      <img
+                        class="finished-solutions__wood"
+                        src="./assets/images/wood.png"
+                        alt="wood"
+                      />
                     </div>
                   </div>
                   <!-- Slide -->
                   <div
-                    class="swiper-slide finished-solutions__slide finished-solutions__slide--big"
+                    class="swiper-slide finished-solutions__slide"
+                    style="width: 50%"
                   >
                     <div
                       class="finished-solutions__square finished-solutions__square--big bg--semi-dark-grey"
                     >
-                      <a href="#contacts">
-                        <p
-                          class="finished-solutions__slider-text text--medium white finished-solutions__slider-text--top"
-                        >
-                          Блок набор <br />
-                          постоянные <br />
-                          клиенты <br />
-                          <span class="text--bold">от 444р</span>
-                        </p>
-                        <img
-                          class="finished-solutions__tea-box"
-                          src="./assets/images/tea_box.png"
-                          alt="tea_box"
-                        />
-                      </a>
+                      <p
+                        class="finished-solutions__slider-text text--medium white finished-solutions__slider-text--top"
+                      >
+                        Блок набор <br />
+                        постоянные <br />
+                        клиенты <br />
+                        <span class="text--bold">от 444р</span>
+                      </p>
+                      <img
+                        class="finished-solutions__tea-box"
+                        src="./assets/images/tea_box.png"
+                        alt="tea_box"
+                      />
                     </div>
                   </div>
                 </div>
@@ -1691,10 +1594,8 @@
         <section class="clients">
           <div class="container clients__container">
             <div class="principles__title-wrapper">
-              <div>
-                <div class="hexagon-wrapper solution__hexagon hexagon--medium">
-                  <div class="hexagon bg--semi-blue"></div>
-                </div>
+              <div class="hexagon-wrapper solution__hexagon hexagon--medium">
+                <div class="hexagon bg--semi-blue"></div>
               </div>
               <h2 class="solution__title title--big black ultrabold">
                 наши клиенты:
@@ -1950,77 +1851,17 @@
                   <span class="blue">продукт</span>
                 </p>
                 <div class="start-project__inner-links ultrabold title--medium">
-                  <a href="tel:+3727943500" class="start-project__link"
-                    >(+372) 794 35 00</a
+                  <a href="tel:<?php echo CFS()->get( 'block_7_phone' ); ?>" class="start-project__link"
+                    ><?php echo CFS()->get( 'block_7_phone' ); ?></a
                   >
-                  <a href="mailto:EBShapoval@ya.ru" class="start-project__link"
-                    >EBShapoval@ya.</a
+                  <a href="mailto:<?php echo CFS()->get( 'block_7_email' ); ?>" class="start-project__link"
+                    ><?php echo CFS()->get( 'block_7_email' ); ?></a
                   >
                 </div>
               </div>
-              <form class="start-project__form text--medium">
-                <label for="name">
-                  Привет, меня зовут <br />
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="Имя, Фамилия"
-                  />
-                </label>
-                <label for="email">
-                  Свяжись со мной по <br />
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="E-mail"
-                  />
-                  <input id="tel" name="tel" type="tel" placeholder="Телефон" />
-                </label>
-                <label for="descr">
-                  Сейчас я ищу <br />
-                  <input
-                    id="descr"
-                    name="descr"
-                    type="text"
-                    placeholder="Мерч для сотрудников"
-                  />
-                </label>
-                <label for="count">
-                  Количество <br />
-                  <input
-                    id="count"
-                    name="count"
-                    type="number"
-                    placeholder="от 50 до 100 шт"
-                  />
-                </label>
-                <label for="budget">
-                  Пожалуйста, останься в бюджете <br />
-                  <input
-                    id="budget"
-                    name="budget"
-                    type="number"
-                    placeholder="___ руб/шт"
-                  />
-                </label>
-                <label for="calendar">
-                  Заказ мне важно получить <br />
-                  <input
-                    id="calendar"
-                    min="2021-01-01"
-                    name="calendar"
-                    type="date"
-                  />
-                </label>
-                <button
-                  class="start-project__btn text--medium ultrabold btn"
-                  type="submit"
-                >
-                  отправить
-                </button>
-              </form>
+              <div class="start-project__form text--medium">
+					<?php echo do_shortcode( '[contact-form-7 id="5" title="Форма обратной связи"]' ); ?>
+              </div>
             </div>
           </div>
           <div
@@ -2056,7 +1897,7 @@
           </ul>
           <ul class="header__socials socials">
             <li class="socials__item">
-              <a href="#">
+              <a href="mailto:<?php echo CFS()->get( 'email' ); ?>">
                 <svg
                   width="62"
                   height="69"
@@ -2080,7 +1921,7 @@
               </a>
             </li>
             <li class="socials__item">
-              <a href="#">
+              <a href="<?php echo CFS()->get( 'telega' ); ?>">
                 <svg
                   width="62"
                   height="69"
@@ -2112,7 +1953,7 @@
               </a>
             </li>
             <li class="socials__item">
-              <a href="#">
+              <a href="<?php echo CFS()->get( 'email' ); ?>">
                 <svg
                   width="62"
                   height="69"

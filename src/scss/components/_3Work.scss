@@ -6,6 +6,10 @@
     padding-bottom: 100px;
   }
 
+  &__item-wrapper {
+    margin-right: 30px;
+  }
+
   &__list {
     max-width: 1130px;
     margin: 0 auto;
@@ -27,7 +31,7 @@
 
   &__scotch {
     position: absolute;
-    top: 0%;
+    top: 15%;
     right: -11%;
 
     img {
@@ -97,10 +101,50 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .work {
     &__list {
       @include bgFrame;
+      padding: 20px 25px;
+    }
+
+    &__container {
+      padding-top: 0;
+    }
+
+    .solution {
+      &__title-wrapper {
+        align-items: flex-start;
+      }
+
+      &__hexagon {
+        margin-top: 6px;
+      }
+    }
+
+    &__hexagon-inner {
+      margin-right: 10px;
+    }
+
+    &__item {
+      margin-bottom: 25px;
+    }
+
+    &__item-text {
+      font-size: 14px;
+      line-height: 14px;
+      text-align: center;
+    }
+
+    &__number {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    .hexagon--arrow {
+      width: 36px;
+      height: 36px;
+      margin-bottom: 10px;
     }
   }
 }

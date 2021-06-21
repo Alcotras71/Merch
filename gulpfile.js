@@ -18,6 +18,13 @@ gulp.task('copy-html', () => {
     .pipe(browserSync.stream());
 });
 
+gulp.task('copy-php', () => {
+  return gulp
+    .src('./src/index.php')
+    .pipe(gulp.dest(dist))
+    .pipe(browserSync.stream());
+});
+
 gulp.task('build-js', () => {
   return gulp
     .src('./src/js/main.js')
@@ -96,7 +103,13 @@ gulp.task('server', () => {
 
 gulp.task(
   'build',
-  gulp.parallel('copy-html', 'build-js', 'build-sass', 'copy-assets')
+  gulp.parallel(
+    'copy-html',
+    'build-js',
+    'build-sass',
+    'copy-assets',
+    'copy-php'
+  )
 );
 
 gulp.task('prod', () => {

@@ -23,11 +23,17 @@ export const finishedSolutionSlider = (count) => {
     grabCursor: true,
     slidesPerGroup: 2,
     speed: 1000,
-    spaceBetween: 50,
+    spaceBetween: 13,
+
     breakpoints: {
+      600: {
+        spaceBetween: 45,
+      },
+
       1025: {
         loop: true,
         slidesPerGroup: 3,
+        spaceBetween: 50,
       },
     },
   });

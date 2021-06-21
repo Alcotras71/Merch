@@ -12,7 +12,7 @@ const initSliders = () => {
 
   const clientsSlider = new Swiper('#clients-slider', {
     slidesPerView: 6,
-    spaceBetween: 100,
+    spaceBetween: 20,
     loop: true,
     grabCursor: true,
     autoplay: {
@@ -22,6 +22,7 @@ const initSliders = () => {
     },
     breakpoints: {
       1025: {
+        spaceBetween: 100,
         slidesPerView: 11,
       },
     },

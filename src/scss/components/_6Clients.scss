@@ -71,3 +71,29 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .clients {
+    .principles__title-wrapper {
+      align-items: flex-start;
+    }
+
+    .hexagon-wrapper {
+      margin-top: 6px;
+    }
+
+    &__hexagon {
+      width: 20vw;
+      height: 20vw;
+    }
+
+    &__slide:nth-child(odd) {
+      margin-top: -15%;
+    }
+
+    &__slider-wrapper {
+      padding-top: 15vw;
+      padding-bottom: 40px;
+    }
+  }
+}
